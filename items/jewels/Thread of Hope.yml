@@ -1,0 +1,9 @@
+acquisitionMethods:
+  - boss:
+      name: Awakener of Worlds (Small to Very Large variants)
+      frequency: rare
+      wiki: https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds#Drops
+  - boss:
+      name: Uber Awakener of Worlds (Massive variant)
+      frequency: common
+      wiki: https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds#Drops

@@ -1,0 +1,7 @@
+acquisitionMethods:
+  - vendorRecipe:
+      components:
+        - Uncorrupted unique Ruby Ring
+        - Level 20 corrupted Lightning Warp gem
+        - Onyx Amulet
+      wiki: https://www.poewiki.net/wiki/Star_of_Wraeclast#Recipes

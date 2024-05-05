@@ -1,0 +1,22 @@
+variants:
+  Cold:
+    acquisitionMethods:
+      - vendorRecipe:
+          components:
+            - Ruby Ring
+            - Topaz Ring
+            - Any gem with Prismatic tag (20% Quality)
+  Fire:
+    acquisitionMethods:
+      - vendorRecipe:
+          components:
+            - Sapphire Ring
+            - Topaz Ring
+            - Any gem with Prismatic tag (20% Quality)
+  Lightning:
+    acquisitionMethods:
+      - vendorRecipe:
+          components:
+            - Sapphire Ring
+            - Ruby Ring
+            - Any gem with Prismatic tag (20% Quality)
