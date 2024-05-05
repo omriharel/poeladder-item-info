@@ -1,0 +1,234 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://github.com/omriharel/poeladder-community-item-info/schemas/single-item.schema.json",
+    "title": "Single item",
+    "description": "Defines known and community-recommended acquisition methods for a Unique item in an SSF environment",
+    "anyOf": [
+        {
+            "$ref": "#/$defs/acquisitionMethods"
+        },
+        {
+            "title": "Variant map",
+            "description": "An object mapping different variants of an item to each of their acquisition methods",
+            "type": "object",
+            "unevaluatedProperties": false,
+            "properties": {
+                "variants": {
+                    "type": "object",
+                    "minProperties": 1,
+                    "additionalProperties": {
+                        "$ref": "#/$defs/acquisitionMethods"
+                    }
+                }
+            },
+            "required": [
+                "variants"
+            ]
+        }
+    ],
+    "$defs": {
+        "acquisitionMethods": {
+            "type": "object",
+            "title": "Acquisition methods",
+            "description": "Defines at least one possible acquisition method for an item",
+            "properties": {
+                "acquisitionMethods": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "$ref": "#/$defs/acquisitionMethod"
+                    }
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "acquisitionMethods"
+            ]
+        },
+        "acquisitionMethod": {
+            "title": "Acquisition method",
+            "description": "A possible way of acquiring an item",
+            "type": "object",
+            "anyOf": [
+                {
+                    "title": "Simple Divination Card sources",
+                    "description": "Details divination cards for an item with drop locations and stack sizes, usable to render the table in the first version of the page",
+                    "properties": {
+                        "simpleDivCardSources": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "cardName": {
+                                        "type": "string"
+                                    },
+                                    "dropLocations": {
+                                        "type": "array",
+                                        "minItems": 1,
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "stackSize": {
+                                        "type": "integer",
+                                        "minimum": 1
+                                    },
+                                    "wiki": {
+                                        "$ref": "#/$defs/wikiLink"
+                                    }
+                                },
+                                "required": [
+                                    "cardName",
+                                    "dropLocations",
+                                    "stackSize",
+                                    "wiki"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "simpleDivCardSources"
+                    ],
+                    "additionalProperties": false
+                },
+                {
+                    "title": "Typical Divination Card farm",
+                    "description": "Details a commonly-employed divination card farming strategy targeted at finding a Unique item",
+                    "properties": {
+                        "typicalDivCardFarm": {
+                            "type": "object",
+                            "properties": {
+                                "investment": {
+                                    "enum": [
+                                        "low",
+                                        "medium",
+                                        "high"
+                                    ]
+                                },
+                                "cards": {
+                                    "type": "array",
+                                    "minItems": 1,
+                                    "items": {
+                                        "type": "object",
+                                        "minProperties": 1,
+                                        "additionalProperties": {
+                                            "type": "array",
+                                            "minItems": 1,
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "required": [
+                                "investment",
+                                "cards"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "typicalDivCardFarm"
+                    ],
+                    "additionalProperties": false
+                },
+                {
+                    "title": "Boss drop",
+                    "description": "Details a boss drop source for a Unique item",
+                    "properties": {
+                        "boss": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string",
+                                    "minLength": 1
+                                },
+                                "frequency": {
+                                    "enum": [
+                                        "common",
+                                        "uncommon",
+                                        "rare",
+                                        "extremely-rare"
+                                    ]
+                                },
+                                "wiki": {
+                                    "$ref": "#/$defs/wikiLink"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "frequency"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "boss"
+                    ],
+                    "additionalProperties": false
+                },
+                {
+                    "title": "Vendor recipe",
+                    "description": "Details a vendor recipe for obtaining a Unique item",
+                    "properties": {
+                        "vendorRecipe": {
+                            "type": "object",
+                            "properties": {
+                                "components": {
+                                    "type": "array",
+                                    "minItems": 1,
+                                    "items": {
+                                        "type": "string",
+                                        "minLength": 1
+                                    }
+                                },
+                                "wiki": {
+                                    "$ref": "#/$defs/wikiLink"
+                                }
+                            },
+                            "required": [
+                                "components"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "vendorRecipe"
+                    ],
+                    "additionalProperties": false
+                },
+                {
+                    "title": "Plain text (special exception)",
+                    "description": "Free-form explanatory text (reserved for special cases that warrant an unstructured text explanation)",
+                    "properties": {
+                        "plainText": {
+                            "type": "string"
+                        },
+                        "referenceLink": {
+                            "anyOf": [
+                                {
+                                    "$ref": "#/$defs/wikiLink"
+                                },
+                                {
+                                    "$ref": "#/$defs/poeFishLink"
+                                }
+                            ]
+                        }
+                    },
+                    "required": [
+                        "plainText",
+                        "referenceLink"
+                    ],
+                    "additionalProperties": false
+                }
+            ]
+        },
+        "wikiLink": {
+            "type": "string",
+            "pattern": "^https://(www\\.)?poewiki\\.net/wiki/\\w[A-Z,a-z'_]+(#\\w[A-Z,a-z'_]+)?$"
+        },
+        "poeFishLink": {
+            "type": "string",
+            "pattern": "^https://poe\\.fish/\\w[/A-Za-z\\-]+(#\\w[A-Za-z\\-]+)?$"
+        }
+    }
+}

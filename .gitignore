@@ -1,0 +1,5 @@
+.venv/
+build/
+node_modules/
+*.json
+!schemas/*.json

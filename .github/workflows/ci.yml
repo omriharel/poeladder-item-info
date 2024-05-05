@@ -1,0 +1,49 @@
+name: Validate and build item data JSON
+run-name: CI
+
+on:
+  push:
+    paths:
+      - "items/**/*.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      PIPENV_VENV_IN_PROJECT: "1"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pipenv"
+
+      - name: Install pipenv
+        run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
+
+      - name: Install python dependencies
+        working-directory: builder
+        run: pipenv sync
+
+      - name: Set up NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install ajv-cli
+        run: |
+          npm install -g ajv-cli
+
+      - name: Run validation and composing script
+        working-directory: builder
+        run: pipenv run python run.py -i ../items -is ../schemas/single-item.schema.json -o ../build/item-data.json
+
+      - name: Upload script output as build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: item-data
+          path: build/item-data.json

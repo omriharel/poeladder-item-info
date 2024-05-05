@@ -1,0 +1,31 @@
+name: Publish release
+
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - "completed"
+    branches:
+      - master
+
+jobs:
+  release:
+    name: "Create release"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: "actions/download-artifact@v4"
+        with:
+          name: item-data
+
+      - name: Get current date
+        run: echo "RELEASE_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: false
+          title: "Item data (release #${{ github.run_number }} - ${{ env.RELEASE_DATE }})"
+          files: |
+            item-data.json
