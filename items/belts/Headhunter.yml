@@ -1,0 +1,7 @@
+acquisitionMethods:
+  - typicalDivCardFarm:
+      investment: high
+      cards:
+        - The Doctor:
+            - Burial Chambers
+            - Phantasmagoria
