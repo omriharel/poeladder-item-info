@@ -46,8 +46,8 @@ jobs:
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
           prerelease: false
-          title: "Item data (release #${{ github.run_number }} - ${{ env.RELEASE_DATE }})"
+          automatic_release_tag: "v${{ github.run_number }}"
+          title: "v${{ github.run_number }} - ${{ env.RELEASE_DATE }}"
           files: |
             item-data.json
