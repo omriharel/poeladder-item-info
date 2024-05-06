@@ -56,12 +56,20 @@ jobs:
         if: ${{ failure() && steps.save-validation-errors.outcome == 'success'}}
         with:
           script: |
+            if (!context.issue) {
+              console.log("No issue in context, skipping comment")
+              return;
+            }
+
+            let fs = require('fs');
+            let fileContents = fs.readFileSync('validation-errors.txt').toString();
+
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '${{ steps.save-validation-errors.outputs.validation-errors }}'
-            })
+              body: fileContents
+            });
 
       - name: Upload script output as build artifact
         uses: actions/upload-artifact@v4

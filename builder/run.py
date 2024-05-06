@@ -69,8 +69,9 @@ def save_validation_errors(validation_errors, error_output_file):
         lines.extend([f"- `{filename}`:", "```", "\n".join(ajv_stderr.split("\n")[1:]), "```"])
 
     with open(error_output_file, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines))
-        logging.info("Written error output to %s (%d lines)", error_output_file, len(lines))
+        content_to_write = "\n".join(lines)
+        f.write(content_to_write)
+        logging.info("Written error output to %s (%d lines)", error_output_file, len(content_to_write.split("\n")))
 
 
 def load_item_files(input_dir):
