@@ -1,15 +1,8 @@
 acquisitionMethods:
-  - simpleDivCardSources:
-      - cardName: The Apothecary
-        dropLocations:
-          - "Crimson Temple"
-          - "Defiled Cathedral"
-        stackSize: 5
-        wiki: https://www.poewiki.net/wiki/The_Apothecary
-
-  - typicalDivCardFarm:
-      investment: high
-      cards:
-        - The Apothecary:
-            - Crimson Temple
-            - Defiled Cathedral
+  - type: typicalDivCardFarm
+    investment: high
+    card: The Apothecary
+    wiki: https://www.poewiki.net/wiki/The_Apothecary
+    dropLocations:
+      - Crimson Temple
+      - Defiled Cathedral

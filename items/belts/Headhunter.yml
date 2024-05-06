@@ -6,7 +6,3 @@ acquisitionMethods:
     dropLocations:
       - Burial Chambers
       - Phantasmagoria
-  - type: boss
-    boss: Sirus the boy
-    frequency: extremely-rare
-    comment: " I wish"

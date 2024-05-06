@@ -1,22 +1,25 @@
 variants:
   Cold:
     acquisitionMethods:
-      - vendorRecipe:
-          components:
-            - Ruby Ring
-            - Topaz Ring
-            - Any gem with Prismatic tag (20% Quality)
+      - type: vendorRecipe
+        components:
+          - Ruby Ring
+          - Topaz Ring
+          - Any gem with Prismatic tag (20% Quality)
+        wiki: https://www.poewiki.net/wiki/Combat_Focus_(Crimson_Jewel)#Recipes
   Fire:
     acquisitionMethods:
-      - vendorRecipe:
-          components:
-            - Sapphire Ring
-            - Topaz Ring
-            - Any gem with Prismatic tag (20% Quality)
+      - type: vendorRecipe
+        components:
+          - Sapphire Ring
+          - Topaz Ring
+          - Any gem with Prismatic tag (20% Quality)
+        wiki: https://www.poewiki.net/wiki/Combat_Focus_(Cobalt_Jewel)#Recipes
   Lightning:
     acquisitionMethods:
-      - vendorRecipe:
-          components:
-            - Sapphire Ring
-            - Ruby Ring
-            - Any gem with Prismatic tag (20% Quality)
+      - type: vendorRecipe
+        components:
+          - Sapphire Ring
+          - Ruby Ring
+          - Any gem with Prismatic tag (20% Quality)
+        wiki: https://www.poewiki.net/wiki/Combat_Focus_(Crimson_Jewel)#Recipes

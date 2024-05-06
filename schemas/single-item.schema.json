@@ -136,6 +136,14 @@
                                 "type": "string",
                                 "minLength": 1
                             },
+                            "uber": {
+                                "type": "boolean",
+                                "default": false
+                            },
+                            "variantName": {
+                                "type": "string",
+                                "minLength": 1
+                            },
                             "frequency": {
                                 "enum": [
                                     "common",
@@ -201,7 +209,7 @@
                         "title": "Plain text (special exception)",
                         "description": "Free-form explanatory text (reserved for special cases that warrant an unstructured text explanation)",
                         "properties": {
-                            "plainText": {
+                            "text": {
                                 "type": "string",
                                 "minLength": 1
                             },
@@ -217,7 +225,7 @@
                             }
                         },
                         "required": [
-                            "plainText",
+                            "text",
                             "referenceLink"
                         ]
                     }
@@ -226,7 +234,7 @@
         },
         "wikiLink": {
             "type": "string",
-            "pattern": "^https://(www\\.)?poewiki\\.net/wiki/\\w[A-Z,a-z'_]+(#\\w[A-Z,a-z'_]+)?$"
+            "pattern": "^https://(www\\.)?poewiki\\.net/wiki/\\w[A-Z,a-z'_()]+(#\\w[A-Z,a-z'_()]+)?$"
         },
         "poeFishLink": {
             "type": "string",
