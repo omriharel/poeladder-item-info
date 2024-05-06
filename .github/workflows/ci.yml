@@ -53,6 +53,7 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
       - uses: actions/github-script@v7
+        if: ${{ failure() && steps.save-validation-errors.outcome == 'success'}}
         with:
           script: |
             github.rest.issues.createComment({
