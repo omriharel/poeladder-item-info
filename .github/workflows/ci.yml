@@ -1,7 +1,7 @@
 name: Validate item data
 
 permissions:
-  issues: write
+  pull-requests: write
 
 on:
   pull_request:
