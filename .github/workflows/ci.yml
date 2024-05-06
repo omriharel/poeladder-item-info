@@ -31,7 +31,6 @@ jobs:
         run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
 
       - name: Install python dependencies
-        working-directory: builder
         run: pipenv sync
 
       - name: Set up NodeJS
@@ -44,8 +43,10 @@ jobs:
           npm install -g ajv-cli
 
       - name: Run validation and composing script
-        working-directory: builder
-        run: pipenv run python run.py -i ../items -is ../schemas/single-item.schema.json -o ../build/item-data.json -co ../github-pr-comment.txt
+        run: |
+          pipenv run python builder/run.py \
+            -i items -is schemas/single-item.schema.json \
+            -o build/item-data.json -co github-pr-comment.txt
 
       - name: Save github PR comment as output
         id: save-pr-comment
