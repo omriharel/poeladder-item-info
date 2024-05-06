@@ -4,7 +4,7 @@ permissions:
   issues: write
 
 on:
-  push:
+  pull_request:
     paths:
       - "items/**/*.yml"
       - "schemas/**/*"
@@ -56,8 +56,8 @@ jobs:
         if: ${{ failure() && steps.save-validation-errors.outcome == 'success'}}
         with:
           script: |
-            if (!context.issue) {
-              console.log("No issue in context, skipping comment")
+            if (!context.issue.number) {
+              console.log("No issue number in context, skipping comment")
               return;
             }
 
