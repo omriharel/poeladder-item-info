@@ -45,7 +45,7 @@ jobs:
         if: ${{ failure() }}
         run: |
           echo "validation-errors<<EOF" >> $GITHUB_OUTPUT
-          echo "$(cat sample.out)" >> $GITHUB_OUTPUT
+          echo "$(cat validation-errors.txt)" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
       - uses: actions/github-script@v7
@@ -66,10 +66,3 @@ jobs:
           name: item-data
           path: build/item-data.json
           if-no-files-found: error
-
-  post-validation-errors-comment:
-    runs-on: ubuntu-latest
-    needs: [build]
-    if: ${{ failure() }}
-
-    steps:
