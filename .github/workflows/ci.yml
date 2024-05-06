@@ -41,7 +41,8 @@ jobs:
           npm install -g ajv-cli
 
       - name: Run validation and composing script
-        run: pipenv run python builder/run.py -i items -is schemas/single-item.schema.json -o build/item-data.json -eo validation-errors.txt
+        working-directory: builder
+        run: pipenv run python run.py -i ../items -is ../schemas/single-item.schema.json -o ../build/item-data.json -eo ../validation-errors.txt
 
       - name: Save validation errors as output
         id: save-validation-errors
