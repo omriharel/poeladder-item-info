@@ -26,7 +26,7 @@ def iterate_yaml_files(base_dir):
         yield filename
 
 
-def validate_item_files(input_dir, item_schema):
+def validate_item_files(input_dir, item_schema, error_output_file):
     validation_errors = []
 
     for filename in iterate_yaml_files(input_dir):
@@ -55,7 +55,22 @@ def validate_item_files(input_dir, item_schema):
         logging.error("Validation error in %s file(s) - quitting", len(validation_errors))
         failing_filenames = ", ".join([error[0][len(input_dir) + 1 :] for error in validation_errors])
         print(f"The following file(s) failed to validate - please fix them to match the schema: {failing_filenames}")
+        save_validation_errors(validation_errors, error_output_file)
         raise SystemExit(1)
+
+
+def save_validation_errors(validation_errors, error_output_file):
+    lines = [
+        "Some file(s) changed/added in this PR don't adhere to the data schema. Please fix the errors detailed below for each file:",
+        "",
+    ]
+
+    for filename, ajv_stderr in validation_errors:
+        lines.extend([f"- `{filename}`:", "```", "\n".join(ajv_stderr.split("\n")[1:]), "```"])
+
+    with open(error_output_file, "w", encoding="utf-8"):
+        error_output_file.write("\n".join(lines))
+        logging.info("Written error output to %s (%d lines)", error_output_file, len(lines))
 
 
 def load_item_files(input_dir):
@@ -78,8 +93,8 @@ def load_item_files(input_dir):
     return item_data
 
 
-def main(input_dir, item_schema, output_file):
-    validate_item_files(input_dir, item_schema)
+def main(input_dir, item_schema, output_file, error_output_file):
+    validate_item_files(input_dir, item_schema, error_output_file)
     item_data = load_item_files(input_dir)
     save_output_json(item_data, output_file)
 
@@ -89,8 +104,9 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--input", help="input directory containing YAML files", required=True)
     parser.add_argument("-is", "--item-schema", help="path to single item schema file", required=True)
     parser.add_argument("-o", "--output", help="output JSON file", required=True)
+    parser.add_argument("-eo", "--error-output", help="output file for errors", required=True)
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.DEBUG)
 
-    main(args.input, args.item_schema, args.output)
+    main(args.input, args.item_schema, args.output, args.error_output)
