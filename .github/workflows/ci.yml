@@ -42,18 +42,18 @@ jobs:
 
       - name: Run validation and composing script
         working-directory: builder
-        run: pipenv run python run.py -i ../items -is ../schemas/single-item.schema.json -o ../build/item-data.json -eo ../validation-errors.txt
+        run: pipenv run python run.py -i ../items -is ../schemas/single-item.schema.json -o ../build/item-data.json -co ../github-pr-comment.txt
 
-      - name: Save validation errors as output
-        id: save-validation-errors
+      - name: Save github PR comment as output
+        id: save-pr-comment
         if: ${{ failure() }}
         run: |
-          echo "validation-errors<<EOF" >> $GITHUB_OUTPUT
-          echo "$(cat validation-errors.txt)" >> $GITHUB_OUTPUT
+          echo "pr-comment<<EOF" >> $GITHUB_OUTPUT
+          echo "$(cat github-pr-comment.txt)" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
       - uses: actions/github-script@v7
-        if: ${{ failure() && steps.save-validation-errors.outcome == 'success'}}
+        if: ${{ failure() && steps.save-pr-comment.outcome == 'success'}}
         with:
           script: |
             if (!context.issue.number) {
@@ -62,7 +62,7 @@ jobs:
             }
 
             let fs = require('fs');
-            let fileContents = fs.readFileSync('validation-errors.txt').toString();
+            let fileContents = fs.readFileSync('github-pr-comment.txt').toString();
 
             github.rest.issues.createComment({
               issue_number: context.issue.number,

@@ -35,7 +35,7 @@ def trim_basedir(filename, input_dir):
     return filename[len(input_dir) + 1 :]
 
 
-def validate_item_files(input_dir, item_schema, error_output_file):
+def validate_item_files(input_dir, item_schema, comment_output_file):
     validation_errors = []
 
     for filename in iterate_yaml_files(input_dir):
@@ -73,12 +73,14 @@ def validate_item_files(input_dir, item_schema, error_output_file):
         logging.error("Validation error in %s file(s) - quitting", len(validation_errors))
         failing_filenames = ", ".join([trim_basedir(error[0], input_dir) for error in validation_errors])
         print(f"The following file(s) failed to validate - please fix them to match the schema: {failing_filenames}")
-        save_validation_errors(input_dir, validation_errors, error_output_file)
+        save_validation_errors(input_dir, validation_errors, comment_output_file)
         raise SystemExit(1)
 
 
-def save_validation_errors(input_dir, validation_errors, error_output_file):
+def save_validation_errors(input_dir, validation_errors, comment_output_file):
     lines = [
+        "❌",
+        ""
         "Some file(s) changed/added in this PR don't adhere to the data schema. Please fix the errors detailed below for each file:",
         "",
     ]
@@ -92,23 +94,27 @@ def save_validation_errors(input_dir, validation_errors, error_output_file):
             [
                 f"- `{trim_basedir(filename, input_dir)}`:",
                 "",
-                "  ```yaml",
+                "```yaml",
                 load_raw_file(filename),
-                "  ```",
-                "  ```",
+                "```",
+                "",
+                "```",
                 "\n".join([f"• {err}" for err in ajv_errors]),
-                "  ```",
+                "```",
                 "",
             ]
         )
 
-    with open(error_output_file, "w", encoding="utf-8") as f:
-        content_to_write = "\n".join(lines)
-        f.write(content_to_write)
+    write_comment_output("\n".join(lines), comment_output_file)
+
+
+def write_comment_output(text, comment_output_file):
+    with open(comment_output_file, "w", encoding="utf-8") as f:
+        f.write(text)
         logging.info(
-            "Written error output to %s (%d lines)",
-            error_output_file,
-            len(content_to_write.split("\n")),
+            "Written pull request comment output to %s (%d lines in total)",
+            comment_output_file,
+            len(text.split("\n")),
         )
 
 
@@ -137,8 +143,8 @@ def load_item_files(input_dir):
     return item_data
 
 
-def main(input_dir, item_schema, output_file, error_output_file):
-    validate_item_files(input_dir, item_schema, error_output_file)
+def main(input_dir, item_schema, output_file, comment_output_file):
+    validate_item_files(input_dir, item_schema, comment_output_file)
     item_data = load_item_files(input_dir)
     save_output_json(item_data, output_file)
 
@@ -148,9 +154,9 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--input", help="input directory containing YAML files", required=True)
     parser.add_argument("-is", "--item-schema", help="path to single item schema file", required=True)
     parser.add_argument("-o", "--output", help="output JSON file", required=True)
-    parser.add_argument("-eo", "--error-output", help="output file for errors", required=True)
+    parser.add_argument("-co", "--comment-output", help="output file for pull request comments", required=True)
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.DEBUG)
 
-    main(args.input, args.item_schema, args.output, args.error_output)
+    main(args.input, args.item_schema, args.output, args.comment_output)
