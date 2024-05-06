@@ -1,7 +1,12 @@
 acquisitionMethods:
-  - typicalDivCardFarm:
-      investment: high
-      cars:
-        - The Doctor:
-            - Burial Chambers
-            - Phantasmagoria
+  - type: typicalDivCardFarm
+    investment: high
+    card: The Doctor
+    wiki: https://www.poewiki.net/wiki/The_Doctor
+    dropLocations:
+      - Burial Chambers
+      - Phantasmagoria
+  - type: boss
+    boss: Sirus the boy
+    frequency: extremely-rare
+    comment: " I wish"
