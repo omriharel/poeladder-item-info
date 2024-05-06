@@ -10,6 +10,9 @@ on:
       - "schemas/**/*"
       - ".github/workflows/**/*"
       - "builder/**/*"
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -46,7 +49,7 @@ jobs:
 
       - name: Save github PR comment as output
         id: save-pr-comment
-        if: ${{ failure() }}
+        if: ${{ failure() && github.event_name == 'pull_request' }}
         run: |
           echo "pr-comment<<EOF" >> $GITHUB_OUTPUT
           echo "$(cat github-pr-comment.txt)" >> $GITHUB_OUTPUT
@@ -56,11 +59,6 @@ jobs:
         if: ${{ failure() && steps.save-pr-comment.outcome == 'success'}}
         with:
           script: |
-            if (!context.issue.number) {
-              console.log("No issue number in context, skipping comment")
-              return;
-            }
-
             let fs = require('fs');
             let fileContents = fs.readFileSync('github-pr-comment.txt').toString();
 
