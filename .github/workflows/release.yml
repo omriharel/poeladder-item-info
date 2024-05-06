@@ -16,7 +16,7 @@ jobs:
     runs-on: "ubuntu-latest"
 
     steps:
-      - name: Download artifact
+      - name: Download item-data artifact
         uses: actions/github-script@v6
         with:
           script: |
@@ -47,7 +47,16 @@ jobs:
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
+          automatic_release_tag: latest
+          title: "Latest data - updated ${{ env.RELEASE_DATE }}"
+          files: |
+            item-data.json
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
           automatic_release_tag: "v${{ github.run_number }}"
-          title: "v${{ github.run_number }} - ${{ env.RELEASE_DATE }}"
+          title: "v${{ github.run_number }} - updated ${{ env.RELEASE_DATE }}"
           files: |
             item-data.json
