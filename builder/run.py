@@ -68,8 +68,8 @@ def save_validation_errors(validation_errors, error_output_file):
     for filename, ajv_stderr in validation_errors:
         lines.extend([f"- `{filename}`:", "```", "\n".join(ajv_stderr.split("\n")[1:]), "```"])
 
-    with open(error_output_file, "w", encoding="utf-8"):
-        error_output_file.write("\n".join(lines))
+    with open(error_output_file, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
         logging.info("Written error output to %s (%d lines)", error_output_file, len(lines))
 
 
