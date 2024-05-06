@@ -1,7 +1,8 @@
 acquisitionMethods:
-  - typicalDivCardFarm:
-      investment: high
-      cards:
-        - The Doctor:
-            - Burial Chambers
-            - Phantasmagoria
+  - type: typicalDivCardFarm
+    investment: high
+    card: The Doctor
+    wiki: https://www.poewiki.net/wiki/The_Doctor
+    dropLocations:
+      - Burial Chambers
+      - Phantasmagoria

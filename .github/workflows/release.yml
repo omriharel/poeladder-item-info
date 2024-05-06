@@ -16,23 +16,23 @@ jobs:
     runs-on: "ubuntu-latest"
 
     steps:
-      - name: Download artifact
+      - name: Download item-data artifact
         uses: actions/github-script@v6
         with:
           script: |
             let allArtifacts = await github.rest.actions.listWorkflowRunArtifacts({
-               owner: context.repo.owner,
-               repo: context.repo.repo,
-               run_id: context.payload.workflow_run.id,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              run_id: context.payload.workflow_run.id,
             });
             let matchArtifact = allArtifacts.data.artifacts.filter((artifact) => {
               return artifact.name == "item-data"
             })[0];
             let download = await github.rest.actions.downloadArtifact({
-               owner: context.repo.owner,
-               repo: context.repo.repo,
-               artifact_id: matchArtifact.id,
-               archive_format: 'zip',
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              artifact_id: matchArtifact.id,
+              archive_format: 'zip',
             });
             let fs = require('fs');
             fs.writeFileSync(`${process.env.GITHUB_WORKSPACE}/item-data.zip`, Buffer.from(download.data));
@@ -47,7 +47,16 @@ jobs:
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
+          automatic_release_tag: latest
+          title: "Latest data - updated ${{ env.RELEASE_DATE }}"
+          files: |
+            item-data.json
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
           automatic_release_tag: "v${{ github.run_number }}"
-          title: "v${{ github.run_number }} - ${{ env.RELEASE_DATE }}"
+          title: "v${{ github.run_number }} - updated ${{ env.RELEASE_DATE }}"
           files: |
             item-data.json
