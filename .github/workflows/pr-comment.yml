@@ -14,9 +14,11 @@ permissions:
 jobs:
   release:
     runs-on: "ubuntu-latest"
+    if: ${{ github.event.workflow_run.event == 'pull_request' }}
 
     steps:
       - name: Download pr comment artifacts
+        id: download-pr-comment-artifacts
         uses: actions/github-script@v7
         with:
           script: |
@@ -26,6 +28,12 @@ jobs:
               run_id: context.payload.workflow_run.id,
             });
             let fs = require('fs');
+
+            if (allArtifacts.length <= 1) {
+              console.log("Not enough artifacts for PR comment, skipping");
+              fs.writeFileSync(`${process.env.GITHUB_OUTPUT}`, "skip-comment=true");
+              return;
+            }
 
             // download pr comment artifact
             let matchArtifact = allArtifacts.data.artifacts.filter((artifact) => {
@@ -53,6 +61,7 @@ jobs:
 
       - name: Unzip artifacts
         id: unzip-artifacts
+        if: ${{ steps.download-pr-comment-artifacts.outputs.skip-comment != 'true' }}
         run: |
           unzip pr-comment.zip
           unzip pr-number.zip
