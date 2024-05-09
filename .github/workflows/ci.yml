@@ -69,18 +69,3 @@ jobs:
           name: pr-comment
           path: github-pr-comment.txt
           if-no-files-found: error
-
-      - name: Save PR number
-        if: ${{ always() && steps.mark-pr-comment-exists.outputs.pr-comment-exists == 'true' }}
-        env:
-          PR_NUMBER: ${{ github.event.number }}
-        run: |
-          echo $PR_NUMBER > pr-number.txt
-
-      - name: Upload PR number as build artifact
-        id: upload-artifact-pr-number
-        if: ${{ always() && steps.mark-pr-comment-exists.outputs.pr-comment-exists == 'true' }}
-        uses: actions/upload-artifact@v4
-        with:
-          name: pr-number
-          path: pr-number.txt

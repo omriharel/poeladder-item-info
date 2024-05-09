@@ -14,59 +14,62 @@ permissions:
 jobs:
   release:
     runs-on: "ubuntu-latest"
+    if: ${{ github.event.workflow_run.event == 'pull_request' }}
 
     steps:
+      - name: "Get information about the origin 'Validate item data' run"
+        uses: potiuk/get-workflow-origin@v1_6
+        id: source-run-info
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          sourceRunId: ${{ github.event.workflow_run.id }}```
+
       - name: Download pr comment artifacts
+        id: download-pr-comment-artifacts
         uses: actions/github-script@v7
         with:
           script: |
             let allArtifacts = await github.rest.actions.listWorkflowRunArtifacts({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              run_id: context.payload.workflow_run.id,
+              run_id: ${{ github.event.workflow_run.id }},
             });
             let fs = require('fs');
 
             // download pr comment artifact
             let matchArtifact = allArtifacts.data.artifacts.filter((artifact) => {
               return artifact.name == "pr-comment"
-            })[0];
+            })
+
+            if (allArtifacts.length == 0) {
+              console.log("No PR comment artifact found, skipping");
+              fs.writeFileSync(`${process.env.GITHUB_OUTPUT}`, "skip-comment=true");
+              return;
+            }
+
             let download = await github.rest.actions.downloadArtifact({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              artifact_id: matchArtifact.id,
+              artifact_id: matchArtifact[0].id,
               archive_format: 'zip',
             });
             fs.writeFileSync(`${process.env.GITHUB_WORKSPACE}/pr-comment.zip`, Buffer.from(download.data));
 
-            // download pr numeber artifact
-            matchArtifact = allArtifacts.data.artifacts.filter((artifact) => {
-              return artifact.name == "pr-number"
-            })[0];
-            download = await github.rest.actions.downloadArtifact({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              artifact_id: matchArtifact.id,
-              archive_format: 'zip',
-            });
-            fs.writeFileSync(`${process.env.GITHUB_WORKSPACE}/pr-number.zip`, Buffer.from(download.data));
-
-      - name: Unzip artifacts
-        id: unzip-artifacts
+      - name: Unzip artifact
+        id: unzip-artifact
+        if: ${{ steps.download-pr-comment-artifacts.outputs.skip-comment != 'true' }}
         run: |
           unzip pr-comment.zip
-          unzip pr-number.zip
 
       - uses: actions/github-script@v7
-        if: ${{ steps.unzip-artifacts.outcome == 'success'}}
+        if: ${{ steps.unzip-artifact.outcome == 'success'}}
         with:
           script: |
             let fs = require('fs');
             let commentFileContents = fs.readFileSync('github-pr-comment.txt').toString();
-            let prNumber = parseInt(fs.readFileSync('pr-number.txt').toString(), 10);
 
             github.rest.issues.createComment({
-              issue_number: prNumber,
+              issue_number: ${{ steps.source-run-info.outputs.pullRequestNumber }},
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: commentFileContents
