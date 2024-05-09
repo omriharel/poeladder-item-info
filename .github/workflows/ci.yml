@@ -50,6 +50,7 @@ jobs:
         if: ${{ always() && github.event_name == 'pull_request' }}
         run: |
           [[ -f github-pr-comment.txt ]] && echo "pr-comment-exists=true" >> $GITHUB_OUTPUT
+        continue-on-error: true
 
       - name: Upload github PR comment as build artifact
         id: upload-artifact-pr-comment
