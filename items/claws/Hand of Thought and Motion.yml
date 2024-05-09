@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: Esh, Forked Thought
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/Esh,_Forked_Thought#Drops
+  - type: plainText
+    text: "Drops occasionally from Breach monsters in Esh's Breaches"
+    referenceLink: https://www.poewiki.net/wiki/Hand_of_Thought_and_Motion#Monster_restrictions
