@@ -1,8 +1,5 @@
 name: Validate item data
 
-permissions:
-  pull-requests: write
-
 on:
   pull_request:
     paths:
@@ -31,7 +28,6 @@ jobs:
         run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
 
       - name: Install python dependencies
-        working-directory: builder
         run: pipenv sync
 
       - name: Set up NodeJS
@@ -44,36 +40,47 @@ jobs:
           npm install -g ajv-cli
 
       - name: Run validation and composing script
-        working-directory: builder
-        run: pipenv run python run.py -i ../items -is ../schemas/single-item.schema.json -o ../build/item-data.json -co ../github-pr-comment.txt
-
-      - name: Save github PR comment as output
-        id: save-pr-comment
-        if: ${{ failure() && github.event_name == 'pull_request' }}
         run: |
-          echo "pr-comment<<EOF" >> $GITHUB_OUTPUT
-          echo "$(cat github-pr-comment.txt)" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+          pipenv run python builder/run.py \
+            -i items -is schemas/single-item.schema.json \
+            -o build/item-data.json -co github-pr-comment.txt
 
-      - uses: actions/github-script@v7
-        if: ${{ failure() && steps.save-pr-comment.outcome == 'success'}}
-        with:
-          script: |
-            let fs = require('fs');
-            let fileContents = fs.readFileSync('github-pr-comment.txt').toString();
-
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: fileContents
-            });
-
-      - name: Upload script output as build artifact
+      - name: Upload compiled item data as build artifact
         uses: actions/upload-artifact@v4
-        id: upload-artifact
+        id: upload-artifact-item-data
         if: ${{ success() }}
         with:
           name: item-data
           path: build/item-data.json
           if-no-files-found: error
+
+      - name: Check if PR comment exists
+        id: mark-pr-comment-exists
+        if: ${{ always() && github.event_name == 'pull_request' }}
+        run: |
+          [[ -f github-pr-comment.txt ]] && echo "pr-comment-exists=true" >> $GITHUB_OUTPUT
+        continue-on-error: true
+
+      - name: Upload github PR comment as build artifact
+        id: upload-artifact-pr-comment
+        if: ${{ always() && steps.mark-pr-comment-exists.outputs.pr-comment-exists == 'true' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-comment
+          path: github-pr-comment.txt
+          if-no-files-found: error
+
+      - name: Save PR number
+        if: ${{ always() && steps.mark-pr-comment-exists.outputs.pr-comment-exists == 'true' }}
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+        run: |
+          echo $PR_NUMBER > pr-number.txt
+
+      - name: Upload PR number as build artifact
+        id: upload-artifact-pr-number
+        if: ${{ always() && steps.mark-pr-comment-exists.outputs.pr-comment-exists == 'true' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-number
+          path: pr-number.txt

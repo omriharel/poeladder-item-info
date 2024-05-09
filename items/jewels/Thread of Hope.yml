@@ -6,7 +6,7 @@ acquisitionMethods:
     wiki: https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds#Drops
 
   - type: boss
-    boss: Sirus, Awakener of Worlds (Massive variant)
+    boss: Sirus, Awakener of Worlds
     uber: true
     variantName: Massive
     frequency: common
