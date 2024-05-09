@@ -119,8 +119,10 @@ class DataBuilder:
             lines.extend(
                 [
                     f"- `{trim_basedir(filename, self._input_dir)}`:",
+                    "",
                     textwrap.indent(f"```yaml\n{load_raw_file(filename).strip()}\n```", "  "),
                     textwrap.indent(f"```\n{formatted_errors}\n```", "  "),
+                    "",
                 ]
             )
 
