@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: "Get information about the origin 'Validate item data' run"
-        uses: potiuk/get-workflow-origin@v1_6
+        uses: potiuk/get-workflow-origin@v1_5
         id: source-run-info
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
