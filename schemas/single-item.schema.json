@@ -234,7 +234,7 @@
         },
         "wikiLink": {
             "type": "string",
-            "pattern": "^https://(www\\.)?poewiki\\.net/wiki/\\w[A-Z,a-z'_()]+(#\\w[A-Z,a-z'_()]+)?$"
+            "pattern": "^https://(www\\.)?poewiki\\.net/wiki/\\w[A-Z,a-z'_\\-()%0-9:]+(#\\w[A-Z,a-z'_\\-()%0-9]+)?$"
         },
         "poeFishLink": {
             "type": "string",
