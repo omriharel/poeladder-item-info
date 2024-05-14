@@ -14,6 +14,7 @@ from utils import (
     build_edit_link,
     build_item_schema_link,
 )
+from constants import Constants
 
 
 class DataBuilder:
@@ -77,15 +78,14 @@ class DataBuilder:
         for filename in filenames:
             item_data = load_yaml_file(filename)
 
-            # trim away .yml suffix
-            raw_item_key = os.path.basename(filename)[:-4]
-
             # expand item variants if they exist in data
             if "variants" in item_data:
                 for variant_name, variant_data in item_data["variants"].items():
-                    composed_data[f"{raw_item_key} ({variant_name})"] = self._enrich_item_data(filename, variant_data)
+                    composed_data[self._build_item_name_key(filename, variant_name)] = self._enrich_item_data(
+                        filename, variant_data
+                    )
             else:
-                composed_data[raw_item_key] = self._enrich_item_data(filename, item_data)
+                composed_data[self._build_item_name_key(filename)] = self._enrich_item_data(filename, item_data)
 
         logging.info(
             "Built composed data for %s total item entries (including variants) from %s item files",
@@ -94,6 +94,24 @@ class DataBuilder:
         )
 
         return composed_data
+
+    @staticmethod
+    def _build_item_name_key(filename, variant_name=None):
+
+        # filename is usually structured like <input_dir>/<class>/<item_name>.yml
+        # trim away dirname and extension, for example: items/belts/Mageblood.yml -> Mageblood
+        base_item_name = os.path.basename(filename)[:-4]
+
+        # some special items must be mapped to a different item key than their original filename,
+        # due to some filenames being illegal on some platforms
+        if base_item_name in Constants.all_unique_contracts:
+            base_item_name = f"Contract: {base_item_name}"
+
+        # variants follow a slightly different naming structure. e.g. "Combat Focus (Fire)"
+        if variant_name is not None:
+            return f"{base_item_name} ({variant_name})"
+
+        return base_item_name
 
     def _enrich_item_data(self, filename, item_data):
         enriched_data = copy.deepcopy(item_data)
