@@ -1,0 +1,6 @@
+acquisitionMethods:
+  - type: boss
+    boss: The Eater of Worlds
+    uber: true
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/The_Eater_of_Worlds#Drops
