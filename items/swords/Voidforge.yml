@@ -3,10 +3,10 @@ acquisitionMethods:
     text: "'The Endless Darkness' divination cards can be passively farmed while you target-farm Harbinger uniques from the boss encounter in T15 Beachhead maps."
     referenceLink: https://poe.fish/fishing-items/anglers-plait
   - type: boss
-    boss: Shaper
+    boss: Uber Elder
     uber: true
     frequency: extremely-rare
-    wiki: https://www.poewiki.net/wiki/The_Shaper#Drops
+    wiki: https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)#Drops
   - type: typicalDivCardFarm
     investment: high
     card: The Endless Darkness
