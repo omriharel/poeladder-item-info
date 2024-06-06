@@ -1,18 +1,9 @@
 acquisitionMethods:
   - type: plainText
-    text: "'The Endless Darkness' divination cards can be passively farmed while you target-farm Harbinger uniques from the boss encounter in T15 Beachhead maps."
-    referenceLink: https://poe.fish/fishing-items/anglers-plait
+    text: "As an alternative to the natural boss drop, Voidforge can be aquired via a stack of 'The Endless Darkness' divination cards. These cards can be passively farmed while you target-farm Harbinger uniques from the boss encounter in T15 Beachhead maps."
+    referenceLink: https://www.poewiki.net/wiki/The_Endless_Darkness
   - type: boss
     boss: Uber Elder
     uber: true
     frequency: extremely-rare
     wiki: https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)#Drops
-  - type: typicalDivCardFarm
-    investment: high
-    card: The Endless Darkness
-    wiki: https://www.poewiki.net/wiki/The_Endless_Darkness
-    dropLocations:
-      - The Beachhead
-      - Infused Beachhead
-      - Delve Harbinger Portals
-      - Portals in "Kirac's Memory of Phaaryl"
