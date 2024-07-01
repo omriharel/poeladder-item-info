@@ -280,12 +280,11 @@
             ]
         },
         "consumable": {
+            "type": "object",
             "title": "Consumable item",
             "description": "An item which is consumed in order to access or alter specific content",
-            "type": "object",
-            "unevaluatedProperties": false,
             "properties": {
-                "type": {
+                "category": {
                     "$comment": "Indicates the type of consumable item",
                     "enum": [
                         "leagueItem",
@@ -318,8 +317,9 @@
                     "$ref": "#/$defs/wikiLink"
                 }
             },
+            "additionalProperties": false,
             "required": [
-                "type",
+                "category",
                 "name"
             ]
         },

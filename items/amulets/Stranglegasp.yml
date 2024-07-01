@@ -4,7 +4,7 @@ acquisitionMethods:
     text: Unique has a chance to drop at the centre of the Purification Pump once all enemies in the map have been defeated.
     frequency: extremely-rare
     consumable:
-      - type: map
+      - category: map
         name: Blight-Ravaged Map
         text: Blight-Ravaged maps can be obtained by completing tier 13+ Blighted Maps.
         wiki: https://www.poewiki.net/wiki/Blight-ravaged_map
