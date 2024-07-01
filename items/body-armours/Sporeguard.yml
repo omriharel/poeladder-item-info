@@ -5,6 +5,6 @@ acquisitionMethods:
     frequency: extremely-rare
     consumable:
       type: map
-      name: Blight-ravaged map
-      text: Blight-ravaged maps can be obtained by completing tier 13+ Blighted Maps.
-      wiki: https://www.poewiki.net/wiki/Blight-ravaged_map
+      name: Blighted map
+      text: Available in blight reward chests from Fungal Growth encounters in maps. Maps with narrow layouts - such as Phantasmagoria - offer more blight reward chests.
+      wiki: https://www.poewiki.net/wiki/Blighted_map
