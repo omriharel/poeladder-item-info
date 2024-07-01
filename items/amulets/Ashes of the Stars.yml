@@ -3,11 +3,11 @@ acquisitionMethods:
     boss: The Eater of Worlds
     uber: true
     frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/The_Eater_of_Worlds#Drops
     consumable:
       type: bossToken
       components:
-        name: Devouring Fragment
-        quanitity: 5
-        text: Available from T17 Map Bosses
-        wiki: https://www.poewiki.net/wiki/Devouring_Fragment
-    wiki: https://www.poewiki.net/wiki/The_Eater_of_Worlds#Drops
+        - name: Devouring Fragment
+          quanitity: 5
+          text: Available from T17 Map Bosses
+          wiki: https://www.poewiki.net/wiki/Devouring_Fragment

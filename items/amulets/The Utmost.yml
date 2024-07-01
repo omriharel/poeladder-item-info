@@ -1,6 +1,7 @@
 acquisitionMethods:
   - type: plainText
-    text: "The Utmost can be assembled in your inventory from the following components:"
+    text: "This unique can be assembled in your inventory from the following components:"
+    referenceLink: https://www.poewiki.net/wiki/The_Utmost
     consumable:
       components:
         - name: Curio of Absorption
@@ -19,4 +20,3 @@ acquisitionMethods:
           quanitity: 1
           text: Rare drop from Uber Eater of Worlds
           wiki: https://www.poewiki.net/wiki/Curio_of_Consumption
-    wiki: https://www.poewiki.net/wiki/The_Utmost

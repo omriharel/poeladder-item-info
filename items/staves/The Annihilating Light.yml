@@ -3,11 +3,11 @@ acquisitionMethods:
     boss: The Searing Exarch
     uber: true
     frequency: common
+    wiki: https://www.poewiki.net/wiki/The_Searing_Exarch#Drops
     consumable:
       type: bossToken
       components:
-        name: Blazing Fragment
-        quanitity: 5
-        text: Available from T17 Map Bosses
-        wiki: https://www.poewiki.net/wiki/Blazing_Fragment
-    wiki: https://www.poewiki.net/wiki/The_Searing_Exarch#Drops
+        - name: Blazing Fragment
+          quanitity: 5
+          text: Available from T17 Map Bosses
+          wiki: https://www.poewiki.net/wiki/Blazing_Fragment
