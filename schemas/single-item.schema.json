@@ -332,7 +332,7 @@
                 },
                 "quantity": {
                     "type": "number",
-                    "minValue": 1
+                    "minimum": 1
                 }
             }
         },
