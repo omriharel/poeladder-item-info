@@ -2,7 +2,7 @@ acquisitionMethods:
   - type: boss
     boss: The Eater of Worlds
     uber: true
-    frequency: uncommon
+    frequency: common
     wiki: https://www.poewiki.net/wiki/The_Eater_of_Worlds#Drops
     consumable:
       type: bossToken

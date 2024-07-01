@@ -1,13 +1,13 @@
 acquisitionMethods:
   - type: boss
-    boss: The Searing Exarch
+    boss: The Eater of Worlds
     uber: true
     frequency: rare
-    wiki: https://www.poewiki.net/wiki/The_Searing_Exarch#Drops
+    wiki: https://www.poewiki.net/wiki/The_Eater_of_Worlds#Drops
     consumable:
       type: bossToken
       components:
-        - name: Blazing Fragment
+        - name: Devouring Fragment
           quantity: 5
           text: Available from T17 Map Bosses
-          wiki: https://www.poewiki.net/wiki/Blazing_Fragment
+          wiki: https://www.poewiki.net/wiki/Devouring_Fragment
