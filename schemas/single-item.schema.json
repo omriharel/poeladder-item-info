@@ -303,6 +303,7 @@
                     "minLength": 1
                 },
                 "components": {
+                    "type": "object",
                     "properties": {
                         "component": {
                             "type": "array",
