@@ -284,7 +284,7 @@
             "title": "Consumable item",
             "description": "An item which is consumed in order to access or alter specific content",
             "properties": {
-                "category": {
+                "type": {
                     "$comment": "Indicates the type of consumable item",
                     "enum": [
                         "leagueItem",
@@ -319,7 +319,7 @@
             },
             "additionalProperties": false,
             "required": [
-                "category",
+                "type",
                 "name"
             ]
         },
