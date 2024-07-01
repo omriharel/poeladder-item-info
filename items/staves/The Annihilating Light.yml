@@ -8,6 +8,6 @@ acquisitionMethods:
       type: bossToken
       components:
         - name: Blazing Fragment
-          quanitity: 5
+          quantity: 5
           text: Available from T17 Map Bosses
           wiki: https://www.poewiki.net/wiki/Blazing_Fragment

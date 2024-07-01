@@ -3,20 +3,21 @@ acquisitionMethods:
     text: "This unique can be assembled in your inventory from the following components:"
     referenceLink: https://www.poewiki.net/wiki/The_Utmost
     consumable:
+      type: uniqueComponents
       components:
         - name: Curio of Absorption
-          quanitity: 1
+          quantity: 1
           text: Rare drop from Uber Searing Exarch
           wiki: https://www.poewiki.net/wiki/Curio_of_Absorption
         - name: Curio of Decay
-          quanitity: 1
+          quantity: 1
           text: Rare drop from Uber Uber Elder
           wiki: https://www.poewiki.net/wiki/Curio_of_Decay
         - name: Curio of Potential
-          quanitity: 1
+          quantity: 1
           text: Rare drop from Uber Maven
           wiki: https://www.poewiki.net/wiki/Curio_of_Potential
         - name: Curio of Consumption
-          quanitity: 1
+          quantity: 1
           text: Rare drop from Uber Eater of Worlds
           wiki: https://www.poewiki.net/wiki/Curio_of_Consumption

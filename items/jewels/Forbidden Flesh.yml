@@ -15,6 +15,6 @@ acquisitionMethods:
       type: bossToken
       components:
         - name: Devouring Fragment
-          quanitity: 5
+          quantity: 5
           text: Available from T17 Map Bosses
           wiki: https://www.poewiki.net/wiki/Devouring_Fragment
