@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: Medved, Feller of Heroes
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/Medved,_Feller_of_Heroes
+  - type: plainText
+    text: "Medved can only be found in encounters with the 'Druids of the Broken Circle' in ilvl 68+ Expedition Logbooks. This boss does NOT have a guaranteed unique drop. If your Logbook has a higher ilvl then you may be able to farm a rarer Expedition boss such as Uhtred (ilvl75+) or Olroth (ilvl81+)."
+    referenceLink: https://www.poewiki.net/wiki/Expedition_Logbook#Expedition_factions

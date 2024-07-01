@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: Uhtred, Covetous Traitor
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/Uhtred,_Covetous_Traitor
+  - type: plainText
+    text: "Uhtred can only be found in encounters with the 'Order of the Chalice' in ilvl 75+ Expedition Logbooks. This boss does NOT have a guaranteed unique drop. If your Logbook is ilvl81+ then you may be able to farm Olroth: a rarer Expedition boss."
+    referenceLink: https://www.poewiki.net/wiki/Expedition_Logbook#Expedition_factions

@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: Olroth, Origin of the Fall
+    frequency: common
+    wiki: https://www.poewiki.net/wiki/Olroth,_Origin_of_the_Fall
+  - type: plainText
+    text: "Olroth can only be found in encounters with the 'Knights of the Sun' in ilvl 81+ Expedition Logbooks."
+    referenceLink: https://www.poewiki.net/wiki/Expedition_Logbook#Expedition_factions
