@@ -1,0 +1,6 @@
+acquisitionMethods:
+  - type: boss
+    boss: Shaper
+    uber: true
+    frequency: extremely-rare
+    wiki: https://www.poewiki.net/wiki/The_Shaper#Drops
