@@ -1,8 +1,15 @@
 acquisitionMethods:
   - type: boss
     boss: The Eater of Worlds
-    uber: true
+    variantName: Passive tree ascendancies
     frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/The_Eater_of_Worlds#Drops
+
+  - type: boss
+    boss: The Eater of Worlds
+    uber: true
+    variantName: Jewel-only ascendancies
+    frequency: extremely-rare
     consumable:
       type: bossToken
       components:

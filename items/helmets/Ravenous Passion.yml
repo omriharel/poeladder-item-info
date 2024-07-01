@@ -2,7 +2,7 @@ acquisitionMethods:
   - type: boss
     boss: The Eater of Worlds
     uber: true
-    frequency: uncommon
+    frequency: common
     consumable:
       type: bossToken
       components:

@@ -1,8 +1,15 @@
 acquisitionMethods:
   - type: boss
     boss: The Searing Exarch
+    variantName: Passive tree ascendancies
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/The_Searing_Exarch#Drops
+
+  - type: boss
+    boss: The Searing Exarch
     uber: true
-    frequency: rare
+    variantName: Jewel-only ascendancies
+    frequency: extremely-rare
     consumable:
       type: bossToken
       components:
