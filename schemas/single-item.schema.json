@@ -65,6 +65,7 @@
                         "typicalDivCardFarm",
                         "boss",
                         "vendorRecipe",
+                        "leagueContent",
                         "plainText"
                     ]
                 }
@@ -152,6 +153,9 @@
                                     "extremely-rare"
                                 ]
                             },
+                            "consumable": {
+                                "$ref": "#/$defs/consumable"
+                            },
                             "wiki": {
                                 "$ref": "#/$defs/wikiLink"
                             }
@@ -198,6 +202,49 @@
                     "if": {
                         "properties": {
                             "type": {
+                                "const": "leagueContent"
+                            }
+                        },
+                        "required": [
+                            "type"
+                        ]
+                    },
+                    "then": {
+                        "title": "League-specific content",
+                        "description": "Details an aquisition method which relies on league-specific content",
+                        "properties": {
+                            "leagueName": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "text": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "frequency": {
+                                "enum": [
+                                    "common",
+                                    "uncommon",
+                                    "rare",
+                                    "extremely-rare"
+                                ]
+                            },
+                            "consumable": {
+                                "$ref": "#/$defs/consumable"
+                            },
+                            "wiki": {
+                                "$ref": "#/$defs/wikiLink"
+                            }
+                        },
+                        "required": [
+                            "leagueName"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
                                 "const": "plainText"
                             }
                         },
@@ -212,6 +259,9 @@
                             "text": {
                                 "type": "string",
                                 "minLength": 1
+                            },                            
+                            "consumable": {
+                                "$ref": "#/$defs/consumable"
                             },
                             "referenceLink": {
                                 "anyOf": [
@@ -230,6 +280,81 @@
                         ]
                     }
                 }
+            ]
+        },
+        "consumable": {
+            "type": "object",
+            "title": "Consumable item",
+            "description": "An item which is consumed in order to access or alter specific content",
+            "properties": {
+                "type": {
+                    "$comment": "Indicates the type of consumable item",
+                    "enum": [
+                        "leagueItem",
+                        "bossToken",
+                        "scarab",
+                        "map",
+                        "uniqueComponents"
+                    ]
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "text": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "components": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "$ref": "#/$defs/consumableComponent"
+                    }
+                },
+                "wiki": {
+                    "$ref": "#/$defs/wikiLink"
+                }
+            },
+            "additionalProperties": false,
+            "anyOf": [
+                {
+                    "required" : [
+                        "name"
+                    ]
+                },
+                {
+                    "required" : [
+                        "components"
+                    ]
+                }
+            ],
+            "required": [
+                "type"
+            ]
+        },
+        "consumableComponent": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "quantity": {
+                    "type": "number",
+                    "minimum": 1
+                },                
+                "text": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "wiki": {
+                    "$ref": "#/$defs/wikiLink"
+                }
+            },
+            "required": [
+                "name",
+                "quantity"
             ]
         },
         "wikiLink": {
