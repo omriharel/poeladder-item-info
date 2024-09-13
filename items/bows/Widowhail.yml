@@ -1,4 +1,4 @@
-aquisitionMethods:
+acquisitionMethods:
   - type: vendorRecipe
     components:
       - Ancient Orb
