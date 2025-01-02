@@ -1,0 +1,79 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "common/consumable.schema.json",
+    "type": "object",
+    "title": "Consumable item",
+    "description": "An item which is consumed in order to access or alter specific content",
+    "properties": {
+        "type": {
+            "$comment": "Indicates the type of consumable item",
+            "enum": [
+                "leagueItem",
+                "bossToken",
+                "scarab",
+                "map",
+                "uniqueComponents"
+            ]
+        },
+        "name": {
+            "type": "string",
+            "minLength": 1
+        },
+        "text": {
+            "type": "string",
+            "minLength": 1
+        },
+        "components": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "$ref": "#/$defs/consumableComponent"
+            }
+        },
+        "wiki": {
+            "$ref": "links.schema.json#/$defs/wikiLink"
+        }
+    },
+    "additionalProperties": false,
+    "anyOf": [
+        {
+            "required": [
+                "name"
+            ]
+        },
+        {
+            "required": [
+                "components"
+            ]
+        }
+    ],
+    "required": [
+        "type"
+    ],
+    "$defs": {
+        "consumableComponent": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "quantity": {
+                    "type": "number",
+                    "minimum": 1
+                },
+                "text": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "wiki": {
+                    "$ref": "links.schema.json#/$defs/wikiLink"
+                }
+            },
+            "required": [
+                "name",
+                "quantity"
+            ]
+        }
+    }
+}

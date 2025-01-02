@@ -21,6 +21,7 @@ class DataBuilder:
     def __init__(self, args):
         self._input_dir = args.input
         self._item_schema = args.item_schema
+        self._common_schemas_glob = args.common_schemas_glob
         self._output_file = args.output
         self._comment_output_file = args.comment_output
 
@@ -38,6 +39,8 @@ class DataBuilder:
                 "ajv",
                 "-s",
                 self._item_schema,
+                "-r",
+                self._common_schemas_glob,
                 "-d",
                 filename,
                 "--spec=draft2020",
@@ -167,6 +170,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="poeladder item info composer")
     parser.add_argument("-i", "--input", help="input directory containing YAML files", required=True)
     parser.add_argument("-is", "--item-schema", help="path to single item schema file", required=True)
+    parser.add_argument("-csg", "--common-schemas-glob", help="glob for referenced common schemas", required=True)
     parser.add_argument("-o", "--output", help="output JSON file", required=True)
     parser.add_argument("-co", "--comment-output", help="output file for pull request comments", required=True)
 

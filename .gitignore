@@ -3,5 +3,5 @@ build/
 node_modules/
 *.json
 !.vscode/*.json
-!schemas/*.json
+!schemas/**/*.json
 github-pr-comment.txt

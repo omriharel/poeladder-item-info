@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://github.com/omriharel/poeladder-community-item-info/schemas/single-item.schema.json",
+    "$id": "single-item.schema.json",
     "title": "Single item",
     "description": "Defines known and community-recommended acquisition methods for a Unique item in an SSF environment",
     "if": {
@@ -108,7 +108,7 @@
                                 }
                             },
                             "wiki": {
-                                "$ref": "#/$defs/wikiLink"
+                                "$ref": "common/links.schema.json#/$defs/wikiLink"
                             }
                         },
                         "required": [
@@ -154,10 +154,10 @@
                                 ]
                             },
                             "consumable": {
-                                "$ref": "#/$defs/consumable"
+                                "$ref": "common/consumable.schema.json"
                             },
                             "wiki": {
-                                "$ref": "#/$defs/wikiLink"
+                                "$ref": "common/links.schema.json#/$defs/wikiLink"
                             }
                         },
                         "required": [
@@ -190,7 +190,7 @@
                                 }
                             },
                             "wiki": {
-                                "$ref": "#/$defs/wikiLink"
+                                "$ref": "common/links.schema.json#/$defs/wikiLink"
                             }
                         },
                         "required": [
@@ -230,10 +230,10 @@
                                 ]
                             },
                             "consumable": {
-                                "$ref": "#/$defs/consumable"
+                                "$ref": "common/consumable.schema.json"
                             },
                             "wiki": {
-                                "$ref": "#/$defs/wikiLink"
+                                "$ref": "common/links.schema.json#/$defs/wikiLink"
                             }
                         },
                         "required": [
@@ -259,17 +259,17 @@
                             "text": {
                                 "type": "string",
                                 "minLength": 1
-                            },                            
+                            },
                             "consumable": {
-                                "$ref": "#/$defs/consumable"
+                                "$ref": "common/consumable.schema.json"
                             },
                             "referenceLink": {
                                 "anyOf": [
                                     {
-                                        "$ref": "#/$defs/wikiLink"
+                                        "$ref": "common/links.schema.json#/$defs/wikiLink"
                                     },
                                     {
-                                        "$ref": "#/$defs/poeFishLink"
+                                        "$ref": "common/links.schema.json#/$defs/poeFishLink"
                                     }
                                 ]
                             }
@@ -281,89 +281,6 @@
                     }
                 }
             ]
-        },
-        "consumable": {
-            "type": "object",
-            "title": "Consumable item",
-            "description": "An item which is consumed in order to access or alter specific content",
-            "properties": {
-                "type": {
-                    "$comment": "Indicates the type of consumable item",
-                    "enum": [
-                        "leagueItem",
-                        "bossToken",
-                        "scarab",
-                        "map",
-                        "uniqueComponents"
-                    ]
-                },
-                "name": {
-                    "type": "string",
-                    "minLength": 1
-                },
-                "text": {
-                    "type": "string",
-                    "minLength": 1
-                },
-                "components": {
-                    "type": "array",
-                    "minItems": 1,
-                    "items": {
-                        "$ref": "#/$defs/consumableComponent"
-                    }
-                },
-                "wiki": {
-                    "$ref": "#/$defs/wikiLink"
-                }
-            },
-            "additionalProperties": false,
-            "anyOf": [
-                {
-                    "required" : [
-                        "name"
-                    ]
-                },
-                {
-                    "required" : [
-                        "components"
-                    ]
-                }
-            ],
-            "required": [
-                "type"
-            ]
-        },
-        "consumableComponent": {
-            "type": "object",
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "minLength": 1
-                },
-                "quantity": {
-                    "type": "number",
-                    "minimum": 1
-                },                
-                "text": {
-                    "type": "string",
-                    "minLength": 1
-                },
-                "wiki": {
-                    "$ref": "#/$defs/wikiLink"
-                }
-            },
-            "required": [
-                "name",
-                "quantity"
-            ]
-        },
-        "wikiLink": {
-            "type": "string",
-            "pattern": "^https://(www\\.)?poewiki\\.net/wiki/\\w[A-Z,a-z'_\\-()%0-9:]+(#\\w[A-Z,a-z'_\\-()%0-9]+)?$"
-        },
-        "poeFishLink": {
-            "type": "string",
-            "pattern": "^https://poe\\.fish/\\w[/A-Za-z\\-]+(#\\w[A-Za-z\\-]+)?$"
         }
     }
 }

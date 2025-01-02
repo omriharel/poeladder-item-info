@@ -1,0 +1,14 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "common/links.schema.json",
+    "$defs": {
+        "wikiLink": {
+            "type": "string",
+            "pattern": "^https://(www\\.)?poewiki\\.net/wiki/\\w[A-Z,a-z'_\\-()%0-9:]+(#\\w[A-Z,a-z'_\\-()%0-9]+)?$"
+        },
+        "poeFishLink": {
+            "type": "string",
+            "pattern": "^https://poe\\.fish/\\w[/A-Za-z\\-]+(#\\w[A-Za-z\\-]+)?$"
+        }
+    }
+}
