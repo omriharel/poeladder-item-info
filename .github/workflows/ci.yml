@@ -42,7 +42,7 @@ jobs:
       - name: Run validation and composing script
         run: |
           pipenv run python builder/run.py \
-            -i items -is schemas/single-item.schema.json \
+            -i items -is schemas/single-item.schema.json -csg 'schemas/common/*.schema.json' \
             -o build/item-data.json -co github-pr-comment.txt
 
       - name: Upload compiled item data as build artifact
