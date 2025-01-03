@@ -1,7 +1,7 @@
 acquisitionMethods:
   - type: boss
     boss: The Maven
-    frequency: rare
+    frequency: common
     wiki: https://www.poewiki.net/wiki/The_Maven#Drops
     consumable:
       id: mavensWrit

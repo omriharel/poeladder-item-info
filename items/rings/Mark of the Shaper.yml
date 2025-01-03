@@ -1,7 +1,7 @@
 acquisitionMethods:
   - type: boss
     boss: Uber Elder
-    frequency: uncommon
+    frequency: common
     wiki: https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)#Drops
     consumable:
       id: maddeningObject

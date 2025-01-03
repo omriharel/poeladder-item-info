@@ -1,7 +1,7 @@
 acquisitionMethods:
   - type: boss
     boss: The Eater of Worlds
-    frequency: common
+    frequency: rare
     wiki: https://www.poewiki.net/wiki/The_Eater_of_Worlds#Drops
     consumable:
       id: screamingInvitation

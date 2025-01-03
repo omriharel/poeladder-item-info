@@ -1,7 +1,7 @@
 acquisitionMethods:
   - type: boss
     boss: Sirus, Awakener of Worlds
-    frequency: common
+    frequency: uncommon
     wiki: https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds#Drops
     consumable:
       id: crestOfTheElderslayers
