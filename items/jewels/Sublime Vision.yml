@@ -1,0 +1,16 @@
+acquisitionMethods:
+  - type: boss
+    boss: Uber Elder
+    uber: true
+    frequency: rare
+    wiki: https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)#Drops
+    consumable:
+      id: decayingFragments
+
+  - type: boss
+    boss: Shaper
+    uber: true
+    frequency: rare
+    wiki: https://www.poewiki.net/wiki/The_Shaper#Drops
+    consumable:
+      id: cosmicFragments

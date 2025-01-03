@@ -2,7 +2,7 @@ acquisitionMethods:
   - type: boss
     boss: Shaper
     uber: true
-    frequency: extremely-rare
+    frequency: uncommon
     wiki: https://www.poewiki.net/wiki/The_Shaper#Drops
     consumable:
       id: cosmicFragments
