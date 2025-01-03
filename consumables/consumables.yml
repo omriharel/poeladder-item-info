@@ -141,7 +141,7 @@ mavensWrit:
   components:
     - name: The Maven's Writ
       quantity: 1
-      text: Defeat the boss in maps witnessed by the Maven
+      text: Defeat 10 atlas map bosses while witnessed by the Maven
       wiki: https://www.poewiki.net/wiki/Screaming_Invitation
 
 mortalFragments:
