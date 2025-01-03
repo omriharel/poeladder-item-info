@@ -3,29 +3,25 @@ import copy
 import logging
 import os
 import subprocess
-import textwrap
 
-from utils import (
-    iterate_yaml_files,
-    load_raw_file,
-    load_yaml_file,
-    save_output_json,
-    trim_basedir,
-    build_edit_link,
-    build_item_schema_link,
-)
+from utils import iterate_yaml_files, load_yaml_file, save_output_json, build_edit_link, trim_basedir
 from constants import Constants
+from reporting import ErrorReporter
 
 
 class DataBuilder:
     def __init__(self, args):
         self._input_dir = args.input
+        self._consumables_dir = args.consumables
         self._item_schema = args.item_schema
         self._common_schemas_glob = args.common_schemas_glob
         self._output_file = args.output
-        self._comment_output_file = args.comment_output
+        self._error_reporter = ErrorReporter(args.comment_output)
+
+        self._loaded_consumables = None
 
     def run(self):
+        self.load_consumable_files()
         self.validate_item_files()
         composed_data = self.load_files_and_build_composed_data()
         save_output_json(composed_data, self._output_file)
@@ -67,13 +63,21 @@ class DataBuilder:
                     validation_errors.append((filename, stderr))
 
         if validation_errors:
-            logging.error("Validation error in %s file(s) - quitting", len(validation_errors))
-            failing_filenames = ", ".join([trim_basedir(error[0], self._input_dir) for error in validation_errors])
-            print(
-                f"The following file(s) failed to validate - please fix them to match the schema: {failing_filenames}"
-            )
-            self._save_validation_errors(validation_errors)
-            raise SystemExit(1)
+            self._error_reporter.report_ajv_errors(validation_errors, self._input_dir, self._item_schema)
+
+    def load_consumable_files(self):
+        self._loaded_consumables = {}
+
+        for filename in iterate_yaml_files(self._consumables_dir):
+            file_consumables = load_yaml_file(filename)
+
+            for consumable_key, consumable_data in file_consumables.items():
+                self._loaded_consumables[consumable_key] = consumable_data
+
+        if self._loaded_consumables:
+            logging.info("Loaded %d consumable data entries", len(self._loaded_consumables))
+        else:
+            logging.info("No consumable data found")
 
     def load_files_and_build_composed_data(self):
         composed_data = {}
@@ -91,7 +95,7 @@ class DataBuilder:
                 composed_data[self._build_item_name_key(filename)] = self._enrich_item_data(filename, item_data)
 
         logging.info(
-            "Built composed data for %s total item entries (including variants) from %s item files",
+            "Built composed data for %d total item entries (including variants) from %d item files",
             len(composed_data),
             len(filenames),
         )
@@ -118,45 +122,35 @@ class DataBuilder:
 
     def _enrich_item_data(self, filename, item_data):
         enriched_data = copy.deepcopy(item_data)
+
+        for acquisition_method in enriched_data["acquisitionMethods"]:
+            consumable = acquisition_method.get("consumable")
+            needs_resolution = consumable and consumable.get("id") is not None
+
+            if needs_resolution:
+                acquisition_method["consumable"] = self._resolve_consumable_reference(consumable, filename)
+
         enriched_data["editLink"] = build_edit_link(filename)
 
         return enriched_data
 
-    def _save_validation_errors(self, validation_errors):
-        lines = [
-            "❌",
-            "",
-            "Some file(s) changed/added in this PR don't adhere to the [item data schema]"
-            + f"({build_item_schema_link(self._item_schema)}). Please fix the errors detailed below for each file:",
-            "",
-        ]
+    def _resolve_consumable_reference(self, consumable, filename):
+        consumable_id = consumable["id"]
+        consumable_data = self._loaded_consumables.get(consumable_id)
 
-        for filename, ajv_stderr in validation_errors:
+        if not consumable_data:
+            logging.warning("Consumable reference '%s' not found for filename %s", consumable_id, filename)
 
-            # trim out first line a-la "../items/belts/Headhunter.yml invalid"
-            ajv_errors = "\n".join(ajv_stderr.strip().split("\n")[1:]).split(", ")
-            formatted_errors = "\n".join(["Errors:"] + [f"• {err}" for err in ajv_errors])
-
-            lines.extend(
-                [
-                    f"- `{trim_basedir(filename, self._input_dir)}`:",
-                    "",
-                    textwrap.indent(f"```yaml\n{load_raw_file(filename).strip()}\n```", "  "),
-                    textwrap.indent(f"```\n{formatted_errors}\n```", "  "),
-                    "",
-                ]
+            error_message = (
+                f"File `{trim_basedir(filename, self._input_dir)}` references a named consumable"
+                + f" (`{consumable_id}`) which doesn't exist. Please ensure you're using the correct"
+                + " internal ID or put your consumable data inline."
             )
+            self._error_reporter.report_general_error(error_message)
 
-        self._write_comment_output("\n".join(lines))
+        logging.debug("Resolved consumable with ID '%s' for filename %s", consumable_id, filename)
 
-    def _write_comment_output(self, text):
-        with open(self._comment_output_file, "w", encoding="utf-8") as f:
-            f.write(text)
-            logging.info(
-                "Written pull request comment output to %s (%d lines in total)",
-                self._comment_output_file,
-                len(text.split("\n")),
-            )
+        return consumable_data
 
 
 def main(args):
@@ -168,7 +162,8 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="poeladder item info composer")
-    parser.add_argument("-i", "--input", help="input directory containing YAML files", required=True)
+    parser.add_argument("-i", "--input", help="input directory of item data YAML files", required=True)
+    parser.add_argument("-c", "--consumables", help="input directory of consumable data YAML files", required=True)
     parser.add_argument("-is", "--item-schema", help="path to single item schema file", required=True)
     parser.add_argument("-csg", "--common-schemas-glob", help="glob for referenced common schemas", required=True)
     parser.add_argument("-o", "--output", help="output JSON file", required=True)

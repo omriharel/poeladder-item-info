@@ -1,0 +1,5 @@
+blightedMap:
+  type: map
+  name: Blighted map
+  text: Available in blight reward chests from Fungal Growth encounters in maps. Maps with narrow layouts - such as Phantasmagoria - offer more blight reward chests.
+  wiki: https://www.poewiki.net/wiki/Blighted_map
