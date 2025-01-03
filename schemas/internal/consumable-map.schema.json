@@ -1,0 +1,11 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "internal/consumable-map.schema.json",
+    "type": "object",
+    "title": "Consumable mapping",
+    "description": "An internal mapping between IDs (to be used as references in item files) and consumable data",
+    "minProperties": 1,
+    "additionalProperties": {
+        "$ref": "../common/consumable.schema.json#/$defs/consumableContainer"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "yaml.schemas": {
+        "schemas/single-item.schema.json": "items/**/*.yml",
+        "schemas/internal/consumable-map.schema.json": "consumables/**/*.yml"
+    }
+}
