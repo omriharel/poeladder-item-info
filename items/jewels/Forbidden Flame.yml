@@ -4,6 +4,8 @@ acquisitionMethods:
     variantName: Passive tree ascendancies
     frequency: uncommon
     wiki: https://www.poewiki.net/wiki/The_Searing_Exarch#Drops
+    consumable:
+      id: incandescentInvitation
 
   - type: boss
     boss: The Searing Exarch
@@ -12,9 +14,4 @@ acquisitionMethods:
     frequency: extremely-rare
     wiki: https://www.poewiki.net/wiki/The_Searing_Exarch#Drops
     consumable:
-      type: bossToken
-      components:
-        - name: Blazing Fragment
-          quantity: 5
-          text: Available from T17 Map Bosses
-          wiki: https://www.poewiki.net/wiki/Blazing_Fragment
+      id: blazingFragments

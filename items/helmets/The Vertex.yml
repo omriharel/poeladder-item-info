@@ -2,7 +2,7 @@ acquisitionMethods:
   - type: boss
     boss: Atziri, Queen of the Vaal
     uber: true
-    frequency: extremely-rare
+    frequency: common
     wiki: https://www.poewiki.net/wiki/Atziri,_Queen_of_the_Vaal#The_Alluring_Abyss
     consumable:
       id: mortalFragments

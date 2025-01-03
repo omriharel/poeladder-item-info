@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: Nightmare of Lycia
+    frequency: rare
+    consumable:
+      type: map
+      name: Sanctuary (T17)
+      wiki: https://www.poewiki.net/wiki/Sanctuary_Map

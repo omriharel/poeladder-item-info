@@ -1,0 +1,9 @@
+acquisitionMethods:
+  - type: boss
+    boss: Avatar of Thunder
+    text: The map boss drops one of five variants of this unique when defeated
+    frequency: common
+    consumable:
+      type: map
+      name: The Vinktar Square
+      wiki: https://www.poewiki.net/wiki/The_Vinktar_Square

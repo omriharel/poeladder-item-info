@@ -6,7 +6,7 @@ This directory is meant to contain .yml files to keep reusable consumable data. 
 blightedMap:
   type: map
   name: Blighted map
-  text: Available in blight reward chests from Fungal Growth encounters in maps. Maps with narrow layouts - such as Phantasmagoria - offer more blight reward chests.
+  text: Available in blight reward chests from Fungal Growth encounters in maps. Maps with narrow layouts - such as Phantasmagoria - offer more blight reward chests
   wiki: https://www.poewiki.net/wiki/Blighted_map
 ```
 
@@ -16,7 +16,7 @@ You will be able to reference it in an item data file like so:
 acquisitionMethods:
   - type: leagueContent
     leagueName: Blight
-    text: This unique has a chance to drop at the centre of the Purification Pump once all enemies in the map have been defeated.
+    text: This unique has a chance to drop at the centre of the Purification Pump once all enemies in the map have been defeated
     frequency: extremely-rare
     consumable:
       id: blightedMap

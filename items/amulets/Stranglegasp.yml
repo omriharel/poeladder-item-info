@@ -1,10 +1,7 @@
 acquisitionMethods:
   - type: leagueContent
     leagueName: Blight
-    text: This unique has a chance to drop at the centre of the Purification Pump once all enemies in the map have been defeated.
+    text: This unique has a chance to drop at the centre of the Purification Pump once all enemies in the map have been defeated
     frequency: extremely-rare
     consumable:
-      type: map
-      name: Blight-ravaged map
-      text: Blight-ravaged maps can be obtained by completing tier 13+ Blighted Maps.
-      wiki: https://www.poewiki.net/wiki/Blight-ravaged_map
+      id: blightRavagedMap

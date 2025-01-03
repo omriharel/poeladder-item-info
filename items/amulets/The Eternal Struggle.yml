@@ -1,0 +1,13 @@
+acquisitionMethods:
+  - type: boss
+    boss: The Black Star
+    frequency: common
+    wiki: https://www.poewiki.net/wiki/The_Black_Star
+    consumable:
+      id: polaricInvitation
+  - type: boss
+    boss: The Infinite Hunger
+    frequency: common
+    wiki: https://www.poewiki.net/wiki/The_Infinite_Hunger
+    consumable:
+      id: writhingInvitation

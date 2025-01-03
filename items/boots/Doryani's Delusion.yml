@@ -1,0 +1,31 @@
+variants:
+  Armour:
+    acquisitionMethods:
+      - type: boss
+        boss: The Apex Assembly
+        text: The map boss can be forced to drop this unique when defeated, based on your choices within the map
+        frequency: common
+        consumable:
+          type: map
+          name: Doryani's Machinarium
+          wiki: https://www.poewiki.net/wiki/Doryani%27s_Machinarium
+  Energy Shield:
+    acquisitionMethods:
+      - type: boss
+        boss: The Apex Assembly
+        text: The map boss can be forced to drop this unique when defeated, based on your choices within the map
+        frequency: common
+        consumable:
+          type: map
+          name: Doryani's Machinarium
+          wiki: https://www.poewiki.net/wiki/Doryani%27s_Machinarium
+  Evasion:
+    acquisitionMethods:
+      - type: boss
+        boss: The Apex Assembly
+        text: The map boss can be forced to drop this unique when defeated, based on your choices within the map
+        frequency: common
+        consumable:
+          type: map
+          name: Doryani's Machinarium
+          wiki: https://www.poewiki.net/wiki/Doryani%27s_Machinarium

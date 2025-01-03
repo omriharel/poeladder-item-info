@@ -4,6 +4,8 @@ acquisitionMethods:
     variantName: Passive tree ascendancies
     frequency: uncommon
     wiki: https://www.poewiki.net/wiki/The_Eater_of_Worlds#Drops
+    consumable:
+      id: screamingInvitation
 
   - type: boss
     boss: The Eater of Worlds
@@ -12,9 +14,4 @@ acquisitionMethods:
     frequency: extremely-rare
     wiki: https://www.poewiki.net/wiki/The_Eater_of_Worlds#Drops
     consumable:
-      type: bossToken
-      components:
-        - name: Devouring Fragment
-          quantity: 5
-          text: Available from T17 Map Bosses
-          wiki: https://www.poewiki.net/wiki/Devouring_Fragment
+      id: devouringFragments
