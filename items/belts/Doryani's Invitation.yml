@@ -1,0 +1,7 @@
+acquisitionMethods:
+  - type: boss
+    boss: Atziri, Queen of the Vaal
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/Atziri,_Queen_of_the_Vaal#The_Apex_of_Sacrifice
+    consumable:
+      id: sacrificeFragments

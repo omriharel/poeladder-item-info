@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: Nightmare of the Unbreakable
+    frequency: rare
+    consumable:
+      type: map
+      name: Fortress (T17)
+      wiki: https://www.poewiki.net/wiki/Fortress_Map

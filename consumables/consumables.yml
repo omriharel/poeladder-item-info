@@ -1,5 +1,99 @@
+blazingFragments:
+  type: bossToken
+  components:
+    - name: Blazing Fragment
+      quantity: 5
+      text: Available from T17 Map Bosses
+      wiki: https://www.poewiki.net/wiki/Blazing_Fragment
+
+blightRavagedMap:
+      type: map
+      name: Blight-ravaged map
+      text: Blight-ravaged maps can be obtained by completing tier 13+ Blighted Maps
+      wiki: https://www.poewiki.net/wiki/Blight-ravaged_map
+
 blightedMap:
   type: map
   name: Blighted map
-  text: Available in blight reward chests from Fungal Growth encounters in maps. Maps with narrow layouts - such as Phantasmagoria - offer more blight reward chests.
+  text: Available in blight reward chests from Fungal Growth encounters in maps. Maps with narrow layouts - such as Phantasmagoria - offer more blight reward chests
   wiki: https://www.poewiki.net/wiki/Blighted_map
+
+devouringFragments:
+  type: bossToken
+  components:
+    - name: Devouring Fragment
+      quantity: 5
+      text: Available from T17 Map Bosses
+      wiki: https://www.poewiki.net/wiki/Devouring_Fragment
+
+incandescentInvitation:
+  type: bossToken
+  components:
+    - name: Incandescent Invitation
+      quantity: 1
+      text: Activate the influence in maps influenced by the Searing Exarch and defeat every 28th map boss
+      wiki: https://www.poewiki.net/wiki/Incandescent_Invitation
+
+mortalFragments:
+  type: bossToken
+  components:
+    - name: Mortal Grief
+      quantity: 1
+      text: Available from Atziri, "Alluring" Vaal side-areas, Ritual encounter rewards & Divination cards
+      wiki: https://www.poewiki.net/wiki/Mortal_Grief
+    - name: Mortal Hope
+      quantity: 1
+      text: Available from Atziri, "Alluring" Vaal side-areas, Ritual encounter rewards & Divination cards
+      wiki: https://www.poewiki.net/wiki/Mortal_Hope
+    - name: Mortal Ignorance
+      quantity: 1
+      text: Available from Atziri, "Alluring" Vaal side-areas, Ritual encounter rewards & Divination cards
+      wiki: https://www.poewiki.net/wiki/Mortal_Ignorance
+    - name: Mortal Rage
+      quantity: 1
+      text: Available from Atziri, "Alluring" Vaal side-areas, Ritual encounter rewards & Divination cards
+      wiki: https://www.poewiki.net/wiki/Mortal_Rage
+
+polaricInvitation:
+  type: bossToken
+  components:
+    - name: Polaric Invitation
+      quantity: 1
+      text: Activate the influence in maps influenced by the Searing Exarch and defeat every 14th map boss
+      wiki: https://www.poewiki.net/wiki/Polaric_Invitation
+
+sacrificeFragments:
+  type: bossToken
+  components:
+    - name: Sacrifice at Dawn
+      quantity: 1
+      text: Available from Vaal side-areas, Ritual encounter rewards & Divination cards
+      wiki: https://www.poewiki.net/wiki/Sacrifice_at_Dawn
+    - name: Sacrifice at Dusk
+      quantity: 1
+      text: Available from Vaal side-areas, Ritual encounter rewards & Divination cards
+      wiki: https://www.poewiki.net/wiki/Sacrifice_at_Dusk
+    - name: Sacrifice at Noon
+      quantity: 1
+      text: Available from Vaal side-areas, Ritual encounter rewards & Divination cards
+      wiki: https://www.poewiki.net/wiki/Sacrifice_at_Noon
+    - name: Sacrifice at Midnight
+      quantity: 1
+      text: Available from Vaal side-areas, Ritual encounter rewards & Divination cards
+      wiki: https://www.poewiki.net/wiki/Sacrifice_at_Midnight
+
+screamingInvitation:
+  type: bossToken
+  components:
+    - name: Screaming Invitation
+      quantity: 1
+      text: Activate the influence in maps influenced by the Eater of Worlds and defeat every 28th map boss
+      wiki: https://www.poewiki.net/wiki/Screaming_Invitation
+
+writhingInvitation:
+  type: bossToken
+  components:
+    - name: Writhing Invitation
+      quantity: 1
+      text: Activate the influence in maps influenced by the Eater of Worlds and defeat every 14th map boss
+      wiki: https://www.poewiki.net/wiki/Writhing_Invitation

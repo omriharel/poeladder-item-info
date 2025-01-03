@@ -1,6 +1,6 @@
 acquisitionMethods:
   - type: plainText
-    text: "As an alternative to the natural boss drop, Voidforge can be aquired via a stack of 'The Endless Darkness' divination cards. These cards can be passively farmed while you target-farm Harbinger uniques from the boss encounter in T15 Beachhead maps."
+    text: As an alternative to the natural boss drop, Voidforge can be aquired via a stack of 'The Endless Darkness' divination cards. These cards can be passively farmed while you target-farm Harbinger uniques from the boss encounter in T15 Beachhead maps
     referenceLink: https://www.poewiki.net/wiki/The_Endless_Darkness
   - type: boss
     boss: Uber Elder

@@ -1,0 +1,9 @@
+acquisitionMethods:
+  - type: boss
+    boss: Helial, the Day Unending
+    text: The map boss is guaranteed to drop this unique when defeated
+    frequency: common
+    consumable:
+      type: map
+      name: The Twilight Temple
+      wiki: https://www.poewiki.net/wiki/The_Twilight_Temple

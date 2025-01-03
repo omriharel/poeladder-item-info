@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: Nightmare of the Depraved Trinity
+    frequency: rare
+    consumable:
+      type: map
+      name: Abomination (T17)
+      wiki: https://www.poewiki.net/wiki/Abomination_Map

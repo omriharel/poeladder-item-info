@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: vendorRecipe
+    components:
+      - Agnerod East
+      - Agnerod North
+      - Agnerod South
+      - Agnerod West
+    wiki: https://www.poewiki.net/wiki/The_Vinktar_Square#Item_acquisition

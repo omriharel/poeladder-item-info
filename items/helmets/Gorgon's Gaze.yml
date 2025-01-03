@@ -1,0 +1,9 @@
+acquisitionMethods:
+  - type: boss
+    boss: Talin, Faithbreaker
+    text: The map boss has a chance to drop this unique when defeated
+    frequency: common
+    consumable:
+      type: map
+      name: Pillars of Arun
+      wiki: https://www.poewiki.net/wiki/Pillars_of_Arun
