@@ -1,3 +1,11 @@
+awakeningFragments:
+  type: bossToken
+  components:
+    - name: Awakening Fragment
+      quantity: 5
+      text: Available from T17 Map Bosses
+      wiki: https://www.poewiki.net/wiki/Awakening_Fragment
+
 blazingFragments:
   type: bossToken
   components:
@@ -7,16 +15,50 @@ blazingFragments:
       wiki: https://www.poewiki.net/wiki/Blazing_Fragment
 
 blightRavagedMap:
-      type: map
-      name: Blight-ravaged map
-      text: Blight-ravaged maps can be obtained by completing tier 13+ Blighted Maps
-      wiki: https://www.poewiki.net/wiki/Blight-ravaged_map
+  type: map
+  name: Blight-ravaged map
+  text: Blight-ravaged maps can be obtained by completing tier 13+ Blighted Maps
+  wiki: https://www.poewiki.net/wiki/Blight-ravaged_map
 
 blightedMap:
   type: map
   name: Blighted map
   text: Available in blight reward chests from Fungal Growth encounters in maps. Maps with narrow layouts - such as Phantasmagoria - offer more blight reward chests
   wiki: https://www.poewiki.net/wiki/Blighted_map
+
+cortex:
+  type: map
+  name: Cortex
+  text: Occasionally drops from a defeated boss of Synthesised maps
+  wiki: https://www.poewiki.net/wiki/Cortex
+
+crestOfTheElderslayers:
+  type: bossToken
+  components:
+    - name: Al-Hezmin's Crest
+      quantity: 1
+      text: Drops when you defeat "Al-Hezmin, the Hunter", an Elderslayer
+      wiki: https://www.poewiki.net/wiki/Al-Hezmin,_the_Hunter
+    - name: Baran's Crest
+      quantity: 1
+      text: Drops when you defeat "Baran, the Crusader", an Elderslayer
+      wiki: https://www.poewiki.net/wiki/Baran,_the_Crusader
+    - name: Drox's Crest
+      quantity: 1
+      text: Drops when you defeat "Drox, the Warlord", an Elderslayer
+      wiki: https://www.poewiki.net/wiki/Drox,_the_Warlord
+    - name: Veritania's Crest
+      quantity: 1
+      text: Drops when you defeat "Veritania, the Redeemer", an Elderslayer
+      wiki: https://www.poewiki.net/wiki/Veritania,_the_Redeemer
+
+decayingFragments:
+  type: bossToken
+  components:
+    - name: Decaying Fragment
+      quantity: 5
+      text: Available from T17 Map Bosses
+      wiki: https://www.poewiki.net/wiki/Decaying_Fragment
 
 devouringFragments:
   type: bossToken
@@ -33,6 +75,74 @@ incandescentInvitation:
       quantity: 1
       text: Activate the influence in maps influenced by the Searing Exarch and defeat every 28th map boss
       wiki: https://www.poewiki.net/wiki/Incandescent_Invitation
+
+keyToDecay:
+  type: bossToken
+  components:
+    - name: Fragment of Constriction
+      quantity: 1
+      text: Drops when you defeat "The Constrictor", an Elder Guardian
+      wiki: https://www.poewiki.net/wiki/Fragment_of_Constriction
+    - name: Fragment of Enslavement
+      quantity: 1
+      text: Drops when you defeat "The Enslaver", an Elder Guardian
+      wiki: https://www.poewiki.net/wiki/Fragment_of_Enslavement
+    - name: Fragment of Eradication
+      quantity: 1
+      text: Drops when you defeat "The Eradicator", an Elder Guardian
+      wiki: https://www.poewiki.net/wiki/Fragment_of_Eradication
+    - name: Fragment of Purification
+      quantity: 1
+      text: Drops when you defeat "The Purifier", an Elder Guardian
+      wiki: https://www.poewiki.net/wiki/Fragment_of_Purification
+
+keyToTheCrucible:
+  type: bossToken
+  components:
+    - name: Fragment of the Chimera
+      quantity: 1
+      text: Drops when you defeat "The Chimera", a Shaper Guardian
+      wiki: https://www.poewiki.net/wiki/Fragment_of_the_Chimera
+    - name: Fragment of the Hydra
+      quantity: 1
+      text: Drops when you defeat "The Hydra", a Shaper Guardian
+      wiki: https://www.poewiki.net/wiki/Fragment_of_the_Hydra
+    - name: Fragment of the Minotaur
+      quantity: 1
+      text: Drops when you defeat "The Minotaur", a Shaper Guardian
+      wiki: https://www.poewiki.net/wiki/Fragment_of_the_Minotaur
+    - name: Fragment of the Phoenix
+      quantity: 1
+      text: Drops when you defeat "The Phoenix", a Shaper Guardian
+      wiki: https://www.poewiki.net/wiki/Fragment_of_the_Phoenix
+
+maddeningObject:
+  type: bossToken
+  components:
+    - name: Fragment of Emptiness
+      quantity: 1
+      text: Drops when you defeat "The Elder"
+      wiki: https://www.poewiki.net/wiki/Fragment_of_Emptiness
+    - name: Fragment of Knowledge
+      quantity: 1
+      text: Drops when you defeat "The Shaper"
+      wiki: https://www.poewiki.net/wiki/Fragment_of_Knowledge
+    - name: Fragment of Shape
+      quantity: 1
+      text: Drops when you defeat "The Shaper"
+      wiki: https://www.poewiki.net/wiki/Fragment_of_Shape
+    - name: Fragment of Terror
+      quantity: 1
+      text: Drops when you defeat "The Elder"
+      wiki: https://www.poewiki.net/wiki/Fragment_of_Terror
+
+mavensWrit:
+  type: bossToken
+  components:
+    - name: The Maven's Writ
+      quantity: 1
+      text: Defeat 10 atlas map bosses while witnessed by the Maven
+      wiki: https://www.poewiki.net/wiki/Screaming_Invitation
 
 mortalFragments:
   type: bossToken

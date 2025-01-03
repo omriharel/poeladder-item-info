@@ -1,0 +1,7 @@
+acquisitionMethods:
+  - type: boss
+    boss: The Shaper
+    frequency: rare
+    wiki: https://www.poewiki.net/wiki/The_Shaper#Drops
+    consumable:
+      id: keyToTheCrucible

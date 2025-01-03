@@ -1,7 +1,7 @@
 acquisitionMethods:
   - type: boss
     boss: The Elder
-    frequency: uncommon
+    frequency: common
     wiki: https://www.poewiki.net/wiki/The_Elder#Drops
     consumable:
       id: keyToDecay

@@ -1,0 +1,25 @@
+acquisitionMethods:
+  - type: boss
+    boss: The Elder
+    variantName: Two Aura Modifiers
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/The_Elder#Drops
+    consumable:
+      id: keyToDecay
+
+  - type: boss
+    boss: Uber Elder
+    variantName: Three Aura Modifiers
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)#Drops
+    consumable:
+      id: maddeningObject
+
+  - type: boss
+    boss: Uber Elder
+    uber: true
+    variantName: Three Aura Modifiers
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)#Drops
+    consumable:
+      id: decayingFragments

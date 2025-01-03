@@ -1,7 +1,7 @@
 acquisitionMethods:
   - type: boss
     boss: The Searing Exarch
-    frequency: common
+    frequency: rare
     wiki: https://www.poewiki.net/wiki/The_Searing_Exarch#Drops
     consumable:
       id: incandescentInvitation
