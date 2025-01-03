@@ -7,3 +7,5 @@ acquisitionMethods:
     uber: true
     frequency: extremely-rare
     wiki: https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)#Drops
+    consumable:
+      id: decayingFragments

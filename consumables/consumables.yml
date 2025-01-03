@@ -32,6 +32,14 @@ cortex:
   text: Occasionally drops from a defeated boss of Synthesised maps
   wiki: https://www.poewiki.net/wiki/Cortex
 
+cosmicFragments:
+  type: bossToken
+  components:
+    - name: Cosmic Fragment
+      quantity: 5
+      text: Available from T17 Map Bosses
+      wiki: https://www.poewiki.net/wiki/Cosmic_Fragment
+
 crestOfTheElderslayers:
   type: bossToken
   components:
@@ -172,6 +180,14 @@ polaricInvitation:
       text: Activate the influence in maps influenced by the Searing Exarch and defeat every 14th map boss
       wiki: https://www.poewiki.net/wiki/Polaric_Invitation
 
+realityFragments:
+  type: bossToken
+  components:
+    - name: Reality Fragment
+      quantity: 5
+      text: Available from T17 Map Bosses
+      wiki: https://www.poewiki.net/wiki/Reality_Fragment
+
 sacrificeFragments:
   type: bossToken
   components:
@@ -199,6 +215,14 @@ screamingInvitation:
       quantity: 1
       text: Activate the influence in maps influenced by the Eater of Worlds and defeat every 28th map boss
       wiki: https://www.poewiki.net/wiki/Screaming_Invitation
+
+synthesisingFragments:
+  type: bossToken
+  components:
+    - name: Synthesising Fragment
+      quantity: 5
+      text: Available from T17 Map Bosses
+      wiki: https://www.poewiki.net/wiki/Synthesising_Fragment
 
 writhingInvitation:
   type: bossToken
