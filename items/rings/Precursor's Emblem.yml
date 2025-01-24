@@ -1,0 +1,64 @@
+variants:
+  Red:
+    acquisitionMethods:
+      - type: vendorRecipe
+        components:
+          - Ahkeli's Meadow
+          - Ahkeli's Mountain
+          - Ahkeli's Valley
+        wiki: https://www.poewiki.net/wiki/Precursor%27s_Emblem_(Endurance_Charge)#Recipes
+  Green:
+    acquisitionMethods:
+      - type: vendorRecipe
+        components:
+          - Uzaza's Meadow
+          - Uzaza's Mountain
+          - Uzaza's Valley
+        wiki: https://www.poewiki.net/wiki/Precursor%27s_Emblem_(Frenzy_Charge)#Recipes
+  Blue:
+    acquisitionMethods:
+      - type: vendorRecipe
+        components:
+          - Putembo's Meadow
+          - Putembo's Mountain
+          - Putembo's Valley
+        wiki: https://www.poewiki.net/wiki/Precursor%27s_Emblem_(Power_Charge)#Recipes
+  Red/Green:
+    acquisitionMethods:
+      - type: vendorRecipe
+        components:
+          - 1 of each of Meadow, Mountain and Valley ring variants which are either...
+          - ...2 "Ahkeli's" rings and 1 "Uzaza's" ring
+          - or 1 "Ahkeli's" ring and 2 "Uzaza's" rings
+      - type: plainText
+        text: The simplest recipe is to use Ahkeli's Valley, Uzaza's Meadow, and either Ahkeli's or Uzaza's Mountain as this avoids using any of the rings dropped by "Aul, the Crystal King"
+        referenceLink: https://www.poewiki.net/wiki/Precursor%27s_Emblem_(Endurance_and_Frenzy_Charge)#Recipes
+  Red/Blue:
+    acquisitionMethods:
+      - type: vendorRecipe
+        components:
+          - 1 of each of Meadow, Mountain and Valley ring variants which are either...
+          - ...2 "Ahkeli's" rings and 1 "Putembo's" ring
+          - or 1 "Ahkeli's" ring and 2 "Putembo's" rings
+      - type: plainText
+        text: The simplest recipe is to use Ahkeli's Mountain, Putembo's Meadow, and either Ahkeli's or Putembo's Valley as this avoids using any of the rings dropped by "Aul, the Crystal King"
+        referenceLink: https://www.poewiki.net/wiki/Precursor%27s_Emblem_(Endurance_and_Power_Charge)#Recipes
+  Green/Blue:
+    acquisitionMethods:
+      - type: vendorRecipe
+        components:
+          - 1 of each of Meadow, Mountain and Valley ring variants which are either...
+          - ...2 "Putembo's" rings and 1 "Uzaza's" ring
+          - or 1 "Putembo's" ring and 2 "Uzaza's" rings
+      - type: plainText
+        text: The simplest recipe is to use Putembo's Valley, Uzaza's Mountain, and either Putembo's or Uzaza's Meadow as this avoids using any of the rings dropped by "Aul, the Crystal King"
+        referenceLink: https://www.poewiki.net/wiki/Precursor%27s_Emblem_(Frenzy_and_Power_Charge)#Recipes
+  Red/Green/Blue:
+    acquisitionMethods:
+      - type: vendorRecipe
+        components:
+          - 1 of each of Meadow, Mountain and Valley ring variants which incorporate...
+          - ...1 "Ahkeli's" ring
+          - and 1 "Putembo's" ring
+          - and 1 "Uzaza's" ring
+        wiki: https://www.poewiki.net/wiki/Precursor%27s_Emblem_(Endurance,_Frenzy_and_Power_Charge)

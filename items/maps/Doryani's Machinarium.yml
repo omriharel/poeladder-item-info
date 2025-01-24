@@ -1,8 +1,11 @@
 acquisitionMethods:
   - type: boss
     boss: Ahuatotli, the Blind
-    frequency: rare
-    wiki: https://www.poewiki.net/wiki/Ahuatotli,_the_Blind#Items_found_from_this_monster
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/Ahuatotli,_the_Blind#Item_drops
+  - type: plainText
+    text: This boss can spawn in Delve nodes of at least 50 depth. Spawn rate of encounter increases until ~200 depth
+    referenceLink: https://poedb.tw/us/DelveBiomes#DelveBiomeWeight
   - type: plainText
     text: Can be found as a Kirac Mission when using a Comprehensive Scouting Report
     referenceLink: https://www.poewiki.net/wiki/Doryani%27s_Machinarium#Item_acquisition

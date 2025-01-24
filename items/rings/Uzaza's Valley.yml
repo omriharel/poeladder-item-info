@@ -1,7 +1,7 @@
 acquisitionMethods:
   - type: boss
     boss: Aul, the Crystal King
-    frequency: common
+    frequency: rare
     wiki: https://www.poewiki.net/wiki/Aul,_the_Crystal_King#Item_drops
   - type: plainText
     text: This boss can spawn in Delve nodes of at least 130 depth. Spawn rate of encounter increases until ~500 depth

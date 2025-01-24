@@ -1,0 +1,6 @@
+acquisitionMethods:
+  - type: leagueContent
+    leagueName: Delve
+    text: This unique drops from "Prehistoric Jewels" chests in "Primeval Chamber Delve" cities. The cities can spawn in Delve nodes of at least 130 depth. Spawn rate of the cities increases until ~500 depth
+    frequency: rare
+    referenceLink: https://poedb.tw/us/DelveBiomes#DelveBiomeWeight

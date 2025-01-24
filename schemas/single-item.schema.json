@@ -273,6 +273,9 @@
                                         "$ref": "common/links.schema.json#/$defs/wikiLink"
                                     },
                                     {
+                                        "$ref": "common/links.schema.json#/$defs/poedbLink"
+                                    },
+                                    {
                                         "$ref": "common/links.schema.json#/$defs/poeFishLink"
                                     }
                                 ]
