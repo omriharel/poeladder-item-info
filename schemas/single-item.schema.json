@@ -237,7 +237,14 @@
                                 "$ref": "common/consumable.schema.json"
                             },
                             "wiki": {
-                                "$ref": "common/links.schema.json#/$defs/wikiLink"
+                                "anyOf": [
+                                    {
+                                        "$ref": "common/links.schema.json#/$defs/wikiLink"
+                                    },
+                                    {
+                                        "$ref": "common/links.schema.json#/$defs/poedbLink"
+                                    }
+                                ]
                             }
                         },
                         "required": [
@@ -271,6 +278,9 @@
                                 "anyOf": [
                                     {
                                         "$ref": "common/links.schema.json#/$defs/wikiLink"
+                                    },
+                                    {
+                                        "$ref": "common/links.schema.json#/$defs/poedbLink"
                                     },
                                     {
                                         "$ref": "common/links.schema.json#/$defs/poeFishLink"

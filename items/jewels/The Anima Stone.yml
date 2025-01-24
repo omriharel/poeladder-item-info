@@ -1,0 +1,7 @@
+acquisitionMethods:
+  - type: vendorRecipe
+    components:
+      - Primordial Eminence
+      - Primordial Harmony
+      - Primordial Might
+    wiki: https://www.poewiki.net/wiki/The_Anima_Stone#Recipes
