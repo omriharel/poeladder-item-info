@@ -1,9 +1,0 @@
-acquisitionMethods:
-  - type: typicalDivCardFarm
-    investment: low
-    card: The Master
-    wiki: https://www.poewiki.net/wiki/The_Master
-    dropLocations:
-      - Fields
-      - Lair
-      - Pen
