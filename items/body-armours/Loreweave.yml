@@ -1,4 +1,5 @@
 acquisitionMethods:
   - type: vendorRecipe
     components:
-      - 50x Unique Ring
+      - 60x Unique Ring
+    wiki: https://www.poewiki.net/wiki/Loreweave#Item_acquisition
