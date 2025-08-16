@@ -5,9 +5,7 @@ acquisitionMethods:
     wiki: https://www.poewiki.net/wiki/The_Poet
     dropLocations:
       - Alleyways
-      - Arcade
-      - Bazaar
-      - Port
+      - Park
   - type: plainText
     text: Can sometimes be obtained from using a Vaal Orb on the unique amulet Tear of Purity
     referenceLink: https://www.poewiki.net/wiki/Blood_of_Corruption#Recipes

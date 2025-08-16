@@ -2,7 +2,7 @@ acquisitionMethods:
   - type: boss
     boss: The Searing Exarch
     uber: true
-    frequency: rare
+    frequency: common
     wiki: https://www.poewiki.net/wiki/The_Searing_Exarch#Drops
     consumable:
       id: blazingFragments
