@@ -2,6 +2,3 @@ acquisitionMethods:
   - type: plainText
     text: Can be Chanced from a normal Fishing Rod
     referenceLink: https://www.poewiki.net/wiki/Song_of_the_Sirens#Item_acquisition
-  - type: plainText
-    text: Has a small chance to drop from Unique monsters while wearing Fairgraves' Tricorne
-    referenceLink: https://www.poewiki.net/wiki/Song_of_the_Sirens#Item_acquisition
