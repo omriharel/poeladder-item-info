@@ -1,0 +1,5 @@
+acquisitionMethods:
+  - type: leagueContent
+    leagueName: Labirynth
+    text: Drops from Silver Chests and Chests from the end of Eternal Labyrinths
+    wiki: https://www.poewiki.net/wiki/Death%27s_Door#Item_acquisition

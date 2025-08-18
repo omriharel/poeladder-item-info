@@ -1,0 +1,5 @@
+acquisitionMethods:
+  - type: leagueContent
+    leagueName: Labirynth
+    text: Drops from Silver Chests and Chests from the end of Labyrinths
+    wiki: https://www.poewiki.net/wiki/Xirgil%27s_Crank#Item_acquisition
