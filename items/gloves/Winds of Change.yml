@@ -1,0 +1,5 @@
+acquisitionMethods:
+  - type: leagueContent
+    leagueName: Labyrinth
+    text: Drops from Silver Chests and Chests from the end of Labyrinths
+    wiki: https://www.poewiki.net/wiki/Winds_of_Change#Item_acquisition
