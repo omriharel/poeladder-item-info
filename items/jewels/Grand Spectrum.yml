@@ -1,0 +1,64 @@
+variants:
+  Power Charges:
+    acquisitionMethods:
+      - type: leagueContent
+        frequency: extremely-rare
+        leagueName: Labirynth
+        text: Grand Spectrum jewels drop from Labyrinth Troves and Emperor's Vaults found throughout the Merciless and Eternal Labyrinths, but cannot be found in Izaro's Treasure in the final room.
+        wiki: https://www.poewiki.net/wiki/Grand_Spectrum_(Cobalt_Jewel,_power_charge)#Item_acquisition
+  Endurance Charges:
+    acquisitionMethods:
+      - type: leagueContent
+        frequency: extremely-rare
+        leagueName: Labirynth
+        text: Grand Spectrum jewels drop from Labyrinth Troves and Emperor's Vaults found throughout the Merciless and Eternal Labyrinths, but cannot be found in Izaro's Treasure in the final room.
+        wiki: https://www.poewiki.net/wiki/Grand_Spectrum_(Crimson_Jewel,_endurance_charge)#Item_acquisition
+  Frenzy Charges:
+    acquisitionMethods:
+      - type: leagueContent
+        frequency: extremely-rare
+        leagueName: Labirynth
+        text: Grand Spectrum jewels drop from Labyrinth Troves and Emperor's Vaults found throughout the Merciless and Eternal Labyrinths, but cannot be found in Izaro's Treasure in the final room.
+        wiki: https://www.poewiki.net/wiki/Grand_Spectrum_(Viridian_Jewel,_frenzy_charge)#Item_acquisition
+  Max Life:
+    acquisitionMethods:
+      - type: leagueContent
+        frequency: extremely-rare
+        leagueName: Labirynth
+        text: Grand Spectrum jewels drop from Labyrinth Troves and Emperor's Vaults found throughout the Merciless and Eternal Labyrinths, but cannot be found in Izaro's Treasure in the final room.
+        wiki: https://www.poewiki.net/wiki/Grand_Spectrum_(Crimson_Jewel,_life)#Item_acquisition
+  Critical Strike Multiplier:
+    acquisitionMethods:
+      - type: leagueContent
+        frequency: rare
+        leagueName: Labirynth
+        text: Grand Spectrum jewels drop from Labyrinth Troves and Emperor's Vaults found throughout the Merciless and Eternal Labyrinths, but cannot be found in Izaro's Treasure in the final room.
+        wiki: https://www.poewiki.net/wiki/Grand_Spectrum_(Cobalt_Jewel,_minion_crit_multi)#Item_acquisition
+  Avoid Elemental Ailments:
+    acquisitionMethods:
+      - type: leagueContent
+        frequency: rare
+        leagueName: Labirynth
+        text: Grand Spectrum jewels drop from Labyrinth Troves and Emperor's Vaults found throughout the Merciless and Eternal Labyrinths, but cannot be found in Izaro's Treasure in the final room.
+        wiki: https://www.poewiki.net/wiki/Grand_Spectrum_(Viridian_Jewel,_ailment_avoidance)#Item_acquisition
+  Elemental Damage:
+    acquisitionMethods:
+      - type: leagueContent
+        frequency: uncommon
+        leagueName: Labirynth
+        text: Grand Spectrum jewels drop from Labyrinth Troves and Emperor's Vaults found throughout the Merciless and Eternal Labyrinths, but cannot be found in Izaro's Treasure in the final room.
+        wiki: https://www.poewiki.net/wiki/Grand_Spectrum_(Viridian_Jewel,_elemental_damage)#Item_acquisition
+  Critical Strike Chance:
+    acquisitionMethods:
+      - type: leagueContent
+        frequency: uncommon
+        leagueName: Labirynth
+        text: Grand Spectrum jewels drop from Labyrinth Troves and Emperor's Vaults found throughout the Merciless and Eternal Labyrinths, but cannot be found in Izaro's Treasure in the final room.
+        wiki: https://www.poewiki.net/wiki/Grand_Spectrum_(Cobalt_Jewel,_crit_chance)#Item_acquisition
+  Elemental Resist:
+    acquisitionMethods:
+      - type: leagueContent
+        frequency: uncommon
+        leagueName: Labirynth
+        text: Grand Spectrum jewels drop from Labyrinth Troves and Emperor's Vaults found throughout the Merciless and Eternal Labyrinths, but cannot be found in Izaro's Treasure in the final room.
+        wiki: https://www.poewiki.net/wiki/Grand_Spectrum_(Crimson_Jewel,_resistance)#Item_acquisition
