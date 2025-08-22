@@ -1,6 +1,6 @@
 acquisitionMethods:
-  - type: plainText
+  - type: leagueContent
     text: Can be obtained as a random reward from Ultimatum encounters.
     frequency: rare
     leagueName: Ultimatum
-    referenceLink: https://www.poewiki.net/wiki/Gamblesprint#Item_acquisition
+    wiki: https://www.poewiki.net/wiki/Gamblesprint#Item_acquisition
