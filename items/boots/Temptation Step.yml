@@ -1,0 +1,6 @@
+acquisitionMethods:
+  - type: plainText
+    text: Can be obtained as a random reward from Ultimatum encounters.
+    frequency: uncommon
+    leagueName: Ultimatum
+    referenceLink: https://www.poewiki.net/wiki/Temptation_Step#Item_acquisition

@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: The Trialmaster
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/The_Trialmaster#Drops
+  - type: plainText
+    text: Can be obtained as a boss drop from the Trialmaster in an Ultimatum encounter in T14+ maps.
+    referenceLink: https://www.poewiki.net/wiki/Mahuxotl%27s_Machination#Item_acquisition
