@@ -1,0 +1,6 @@
+acquisitionMethods:
+  - type: leagueContent
+    text: Can be obtained as a random reward from Ultimatum encounters.
+    frequency: rare
+    leagueName: Ultimatum
+    wiki: https://www.poewiki.net/wiki/Relic_of_the_Pact#Item_acquisition
