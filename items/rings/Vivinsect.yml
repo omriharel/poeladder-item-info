@@ -1,0 +1,6 @@
+acquisitionMethods:
+  - type: leagueContent
+    leagueName: Betrayal
+    text: Drops from executed Safehouse leaders in Research Safehouses. Only obtainable from Safehouses of area level 78 or higher.
+    frequency: common
+    referenceLink: https://www.poewiki.net/wiki/Vivinsect#Item_acquisition
