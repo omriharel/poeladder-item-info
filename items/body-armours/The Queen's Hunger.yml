@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: Catarina, Master of Undeath
+    uber: false
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/Catarina,_Master_of_Undeath#Boss_drops
+    consumable:
+      id: syndicateMedallion

@@ -1,0 +1,6 @@
+acquisitionMethods:
+  - type: leagueContent
+    leagueName: Betrayal
+    text: Can be obtained randomly as an extra unique from Riker's Rank 3 reward room chest in Transportation Syndicate Hideouts.
+    frequency: extremely-rare
+    wiki: https://www.poewiki.net/wiki/Cloak_of_Tawm%27r_Isley#Item_acquisition

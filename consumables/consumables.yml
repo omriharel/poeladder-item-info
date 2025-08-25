@@ -231,3 +231,11 @@ writhingInvitation:
       quantity: 1
       text: Activate the influence in maps influenced by the Eater of Worlds and defeat every 14th map boss
       wiki: https://www.poewiki.net/wiki/Writhing_Invitation
+
+syndicateMedallion:
+  type: bossToken
+  components:
+    - name: Syndicate Medallion
+      quantity: 1
+      text: Drops from executed Safehouse leaders in Safehouses. Only obtainable from Safehouses of area level 78 or higher.
+      wiki: https://www.poewiki.net/wiki/Syndicate_Medallion
