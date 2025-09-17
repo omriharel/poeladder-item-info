@@ -245,7 +245,7 @@ theOriginalScripture:
   components:
     - name: The Original Scripture
       quantity: 1
-      text: Has a chance to drop from Lycia, Herald of the Scourge in a Sanctum of area level 81+.
+      text: Extremely rare drop from Lycia, Herald of the Scourge in a Sanctum of area level 81+.
       wiki: https://www.poewiki.net/wiki/The_Original_Scripture
 
 theSecondSacrament:
@@ -253,7 +253,7 @@ theSecondSacrament:
   components:
     - name: The Second Sacrament
       quantity: 1
-      text: Has a chance to drop from Lycia, Herald of the Scourge in a Sanctum of area level 81+.
+      text: Extremely rare drop from Lycia, Herald of the Scourge in a Sanctum of area level 81+.
       wiki: https://www.poewiki.net/wiki/The_Second_Sacrament
 
 thePowerandthePromise:
@@ -261,7 +261,7 @@ thePowerandthePromise:
   components:
     - name: The Power and the Promise
       quantity: 1
-      text: Has a chance to drop from Lycia, Herald of the Scourge in a Sanctum of area level 78+.
+      text: Uncommon drop from Lycia, Herald of the Scourge in a Sanctum of area level 78+.
       wiki: https://www.poewiki.net/wiki/The_Power_and_the_Promise
 
 theChainsofCastigation:
@@ -269,7 +269,7 @@ theChainsofCastigation:
   components:
     - name: The Chains of Castigation
       quantity: 1
-      text: Has a chance to drop from Lycia, Herald of the Scourge in a Sanctum of area level 73+.
+      text: Rare drop from Lycia, Herald of the Scourge in a Sanctum of area level 73+.
       wiki: https://www.poewiki.net/wiki/The_Chains_of_Castigation
 
 theBloodofInnocence:
@@ -277,7 +277,7 @@ theBloodofInnocence:
   components:
     - name: The Blood of Innocence
       quantity: 1
-      text: Has a chance to drop from Lycia, Herald of the Scourge in a Sanctum of area level 71+.
+      text: Common drop from Lycia, Herald of the Scourge in a Sanctum of area level 71+.
       wiki: https://www.poewiki.net/wiki/The_Blood_of_Innocence
 
 
