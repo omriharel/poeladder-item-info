@@ -241,7 +241,7 @@ syndicateMedallion:
       wiki: https://www.poewiki.net/wiki/Syndicate_Medallion
 
 theOriginalScripture:
-  type: bossToken
+  type: leagueItem
   components:
     - name: The Original Scripture
       quantity: 1
@@ -249,7 +249,7 @@ theOriginalScripture:
       wiki: https://www.poewiki.net/wiki/The_Original_Scripture
 
 theSecondSacrament:
-  type: bossToken
+  type: leagueItem
   components:
     - name: The Second Sacrament
       quantity: 1
@@ -257,7 +257,7 @@ theSecondSacrament:
       wiki: https://www.poewiki.net/wiki/The_Second_Sacrament
 
 thePowerandthePromise:
-  type: bossToken
+  type: leagueItem
   components:
     - name: The Power and the Promise
       quantity: 1
@@ -265,7 +265,7 @@ thePowerandthePromise:
       wiki: https://www.poewiki.net/wiki/The_Power_and_the_Promise
 
 theChainsofCastigation:
-  type: bossToken
+  type: leagueItem
   components:
     - name: The Chains of Castigation
       quantity: 1
@@ -273,7 +273,7 @@ theChainsofCastigation:
       wiki: https://www.poewiki.net/wiki/The_Chains_of_Castigation
 
 theBloodofInnocence:
-  type: bossToken
+  type: leagueItem
   components:
     - name: The Blood of Innocence
       quantity: 1
