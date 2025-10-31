@@ -5,18 +5,17 @@ acquisitionMethods:
     wiki: https://www.poewiki.net/wiki/The_Doctor
     dropLocations:
       - Sepulchre
-      - Spider Forest
+      - Burial Chambers
   - type: typicalDivCardFarm
     investment: high
     card: The Nurse
     wiki: https://www.poewiki.net/wiki/The_Nurse
     dropLocations:
       - Abomination
-      - Scriptorium
-      - Tower
+      - Cells
   - type: typicalDivCardFarm
     investment: high
     card: The Patient
     wiki: https://www.poewiki.net/wiki/The_Patient
     dropLocations:
-      - Ramparts
+      - Promenade
