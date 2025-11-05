@@ -280,4 +280,10 @@ theBloodofInnocence:
       text: Common drop from Lycia, Herald of the Scourge in a Sanctum of area level 71+.
       wiki: https://www.poewiki.net/wiki/The_Blood_of_Innocence
 
-
+hivebrainGland:
+  type: bossToken
+  components:
+    - name: Hivebrain Gland
+      quantity: 1
+      text: Can drop from Vruun, Marshal of Xesht or from completing a Hive Fortress encounter, or obtained from a Mysterious Wombgift.
+      wiki: https://www.poewiki.net/wiki/Hivebrain_Gland
