@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: Uber Hillock
+    frequency: extremely-rare
+    wiki: https://www.poewiki.net/wiki/Oni-Goroshi#Item_acquisition
+  - type: plainText
+    text: This item CANNOT be acquired in Ruthless mode.
+    referenceLink: https://www.poewiki.net/wiki/Oni-Goroshi#Ruthless_mode
