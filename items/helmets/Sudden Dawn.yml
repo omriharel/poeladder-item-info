@@ -1,0 +1,7 @@
+acquisitionMethods:
+  - type: boss
+    boss: The Black Star
+    frequency: rare
+    wiki: https://www.poewiki.net/wiki/The_Black_Star
+    consumable:
+      id: polaricInvitation

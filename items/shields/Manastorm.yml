@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: Nightmare of Uhtred
+    frequency: rare
+    consumable:
+      type: map
+      name: Citadel (T17)
+      wiki: https://www.poewiki.net/wiki/Citadel_Map

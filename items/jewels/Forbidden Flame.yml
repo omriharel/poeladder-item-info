@@ -1,0 +1,17 @@
+acquisitionMethods:
+  - type: boss
+    boss: The Searing Exarch
+    variantName: Passive tree ascendancies
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/The_Searing_Exarch#Drops
+    consumable:
+      id: incandescentInvitation
+
+  - type: boss
+    boss: The Searing Exarch
+    uber: true
+    variantName: Jewel-only ascendancies
+    frequency: extremely-rare
+    wiki: https://www.poewiki.net/wiki/The_Searing_Exarch#Drops
+    consumable:
+      id: blazingFragments

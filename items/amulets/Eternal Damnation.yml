@@ -1,4 +1,7 @@
 acquisitionMethods:
-  - type: plainText
-    text: Drops from Lycia, Herald of the Scourge when The Power and the Promise is applied to a Sanctum
-    referenceLink: https://www.poewiki.net/wiki/The_Power_and_the_Promise
+  - type: leagueContent
+    leagueName: Sanctum
+    text: Drops from Lycia, Herald of the Scourge when The The Power and the Promise unique relic is applied to a Sanctum with a level 75+ Forbidden Tome.
+    wiki: https://www.poewiki.net/wiki/Lycia#Unique_items
+    consumable:
+      id: thePowerandthePromise

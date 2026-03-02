@@ -1,0 +1,99 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "common/consumable.schema.json",
+    "title": "Consumable item",
+    "description": "An item which is consumed in order to access or alter specific content",
+    "oneOf": [
+        {
+            "$comment": "Refer to a consumable (from the files under the \"consumables\" directory) by its internal ID to avoid duplication",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "minLength": 1
+                }
+            },
+            "required": [
+                "id"
+            ]
+        },
+        {
+            "$ref": "#/$defs/consumableContainer"
+        }
+    ],
+    "$defs": {
+        "consumableContainer": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "$comment": "Indicates the type of consumable item",
+                    "enum": [
+                        "leagueItem",
+                        "bossToken",
+                        "scarab",
+                        "map",
+                        "uniqueComponents"
+                    ]
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "text": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "components": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "$ref": "#/$defs/consumableComponent"
+                    }
+                },
+                "wiki": {
+                    "$ref": "links.schema.json#/$defs/wikiLink"
+                }
+            },
+            "additionalProperties": false,
+            "anyOf": [
+                {
+                    "required": [
+                        "name"
+                    ]
+                },
+                {
+                    "required": [
+                        "components"
+                    ]
+                }
+            ],
+            "required": [
+                "type"
+            ]
+        },
+        "consumableComponent": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "quantity": {
+                    "type": "number",
+                    "minimum": 1
+                },
+                "text": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "wiki": {
+                    "$ref": "links.schema.json#/$defs/wikiLink"
+                }
+            },
+            "required": [
+                "name",
+                "quantity"
+            ]
+        }
+    }
+}

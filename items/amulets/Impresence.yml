@@ -1,0 +1,41 @@
+variants:
+  Chaos:
+    acquisitionMethods:
+      - type: boss
+        boss: The Elder
+        frequency: rare
+        wiki: https://www.poewiki.net/wiki/The_Elder#Drops
+        consumable:
+          id: keyToDecay
+  Cold:
+    acquisitionMethods:
+      - type: boss
+        boss: The Elder
+        frequency: rare
+        wiki: https://www.poewiki.net/wiki/The_Elder#Drops
+        consumable:
+          id: keyToDecay
+  Fire:
+    acquisitionMethods:
+      - type: boss
+        boss: The Elder
+        frequency: rare
+        wiki: https://www.poewiki.net/wiki/The_Elder#Drops
+        consumable:
+          id: keyToDecay
+  Lightning:
+    acquisitionMethods:
+      - type: boss
+        boss: The Elder
+        frequency: rare
+        wiki: https://www.poewiki.net/wiki/The_Elder#Drops
+        consumable:
+          id: keyToDecay
+  Physical:
+    acquisitionMethods:
+      - type: boss
+        boss: The Elder
+        frequency: rare
+        wiki: https://www.poewiki.net/wiki/The_Elder#Drops
+        consumable:
+          id: keyToDecay

@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: Admiral Valerius
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/Admiral_Valerius#Item_drops
+  - type: plainText
+    text: This boss can be encountered randomly when pirates commandeer players' ships during a Shipping encounter in Kingsmarch.
+    referenceLink: https://www.poewiki.net/wiki/Kingsmarch#Shipping

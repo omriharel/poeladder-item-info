@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: The Black Knight
+    frequency: extremely-rare
+    wiki: https://www.poewiki.net/wiki/The_Black_Knight#Item_drops
+  - type: plainText
+    text: This boss can be encountered in Tier 16+ map areas containing ore deposits. Spawning more ore deposits with atlas tree, scarabs and map device increases chance to spawn him significantly.
+    referenceLink: https://www.poewiki.net/wiki/The_Black_Knight

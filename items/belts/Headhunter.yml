@@ -4,5 +4,18 @@ acquisitionMethods:
     card: The Doctor
     wiki: https://www.poewiki.net/wiki/The_Doctor
     dropLocations:
+      - Sepulchre
       - Burial Chambers
-      - Phantasmagoria
+  - type: typicalDivCardFarm
+    investment: high
+    card: The Nurse
+    wiki: https://www.poewiki.net/wiki/The_Nurse
+    dropLocations:
+      - Abomination
+      - Cells
+  - type: typicalDivCardFarm
+    investment: high
+    card: The Patient
+    wiki: https://www.poewiki.net/wiki/The_Patient
+    dropLocations:
+      - Promenade

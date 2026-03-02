@@ -1,0 +1,9 @@
+acquisitionMethods:
+  - type: boss
+    boss: Selenia, the Endless Night
+    text: The map boss is guaranteed to drop this unique when defeated
+    frequency: common
+    consumable:
+      type: map
+      name: The Twilight Temple
+      wiki: https://www.poewiki.net/wiki/The_Twilight_Temple

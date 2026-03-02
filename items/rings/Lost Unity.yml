@@ -1,0 +1,9 @@
+acquisitionMethods:
+  - type: vendorRecipe
+    components:
+      - The Sundered Will
+      - The Will of Esh
+      - The Will of Tul
+      - The Will of Uul-Netol
+      - The Will of Xoph
+    wiki: https://www.poewiki.net/wiki/Lost_Unity#Item_acquisition

@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: Sasan, the Bandit Lord
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/Sasan,_the_Bandit_Lord#Item_drops
+  - type: plainText
+    text: This boss can be randomly encountered when your map runners are taken hostage.
+    referenceLink: https://www.poewiki.net/wiki/Kalguuran_Map_Device

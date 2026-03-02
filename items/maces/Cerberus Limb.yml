@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: Ahuatotli, the Blind
+    frequency: common
+    wiki: https://www.poewiki.net/wiki/Ahuatotli,_the_Blind#Item_drops
+  - type: plainText
+    text: This boss can spawn in Delve nodes of at least 50 depth. Spawn rate of encounter increases until ~200 depth
+    referenceLink: https://poedb.tw/us/DelveBiomes#DelveBiomeWeight

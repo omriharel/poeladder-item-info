@@ -1,0 +1,7 @@
+acquisitionMethods:
+  - type: leagueContent
+    leagueName: Sanctum
+    text: Drops from Lycia, Herald of the Scourge when The Original Scripture unique relic is applied to a Sanctum with a level 83 Forbidden Tome.
+    wiki: https://www.poewiki.net/wiki/Lycia#Unique_items
+    consumable:
+      id: theOriginalScripture

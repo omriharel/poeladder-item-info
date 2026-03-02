@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: Nightmare of Catarina
+    frequency: rare
+    consumable:
+      type: map
+      name: Ziggurat (T17)
+      wiki: https://www.poewiki.net/wiki/Ziggurat_Map

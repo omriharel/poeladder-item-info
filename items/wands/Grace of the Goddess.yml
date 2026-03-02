@@ -4,3 +4,5 @@ acquisitionMethods:
     uber: true
     frequency: extremely-rare
     wiki: https://www.poewiki.net/wiki/The_Maven#Drops
+    consumable:
+      id: realityFragments

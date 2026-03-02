@@ -1,4 +1,7 @@
 acquisitionMethods:
-  - type: plainText
-    text: Drops from Lycia, Herald of the Scourge when The Second Sacrament is applied to a Sanctum
-    referenceLink: https://www.poewiki.net/wiki/The_Second_Sacrament
+  - type: leagueContent
+    leagueName: Sanctum
+    text: Drops from Lycia, Herald of the Scourge when The Second Sacrament unique relic is applied to a Sanctum with a level 83 Forbidden Tome.
+    wiki: https://www.poewiki.net/wiki/Lycia#Unique_items
+    consumable:
+      id: theSecondSacrament

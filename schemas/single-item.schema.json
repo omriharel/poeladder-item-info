@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://github.com/omriharel/poeladder-community-item-info/schemas/single-item.schema.json",
+    "$id": "single-item.schema.json",
     "title": "Single item",
     "description": "Defines known and community-recommended acquisition methods for a Unique item in an SSF environment",
     "if": {
@@ -65,6 +65,7 @@
                         "typicalDivCardFarm",
                         "boss",
                         "vendorRecipe",
+                        "leagueContent",
                         "plainText"
                     ]
                 }
@@ -107,7 +108,7 @@
                                 }
                             },
                             "wiki": {
-                                "$ref": "#/$defs/wikiLink"
+                                "$ref": "common/links.schema.json#/$defs/wikiLink"
                             }
                         },
                         "required": [
@@ -144,6 +145,10 @@
                                 "type": "string",
                                 "minLength": 1
                             },
+                            "text": {
+                                "type": "string",
+                                "minLength": 1
+                            },
                             "frequency": {
                                 "enum": [
                                     "common",
@@ -152,8 +157,11 @@
                                     "extremely-rare"
                                 ]
                             },
+                            "consumable": {
+                                "$ref": "common/consumable.schema.json"
+                            },
                             "wiki": {
-                                "$ref": "#/$defs/wikiLink"
+                                "$ref": "common/links.schema.json#/$defs/wikiLink"
                             }
                         },
                         "required": [
@@ -186,11 +194,61 @@
                                 }
                             },
                             "wiki": {
-                                "$ref": "#/$defs/wikiLink"
+                                "$ref": "common/links.schema.json#/$defs/wikiLink"
                             }
                         },
                         "required": [
                             "components"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "type": {
+                                "const": "leagueContent"
+                            }
+                        },
+                        "required": [
+                            "type"
+                        ]
+                    },
+                    "then": {
+                        "title": "League-specific content",
+                        "description": "Details an aquisition method which relies on league-specific content",
+                        "properties": {
+                            "leagueName": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "text": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "frequency": {
+                                "enum": [
+                                    "common",
+                                    "uncommon",
+                                    "rare",
+                                    "extremely-rare"
+                                ]
+                            },
+                            "consumable": {
+                                "$ref": "common/consumable.schema.json"
+                            },
+                            "wiki": {
+                                "anyOf": [
+                                    {
+                                        "$ref": "common/links.schema.json#/$defs/wikiLink"
+                                    },
+                                    {
+                                        "$ref": "common/links.schema.json#/$defs/poedbLink"
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "leagueName"
                         ]
                     }
                 },
@@ -213,13 +271,19 @@
                                 "type": "string",
                                 "minLength": 1
                             },
+                            "consumable": {
+                                "$ref": "common/consumable.schema.json"
+                            },
                             "referenceLink": {
                                 "anyOf": [
                                     {
-                                        "$ref": "#/$defs/wikiLink"
+                                        "$ref": "common/links.schema.json#/$defs/wikiLink"
                                     },
                                     {
-                                        "$ref": "#/$defs/poeFishLink"
+                                        "$ref": "common/links.schema.json#/$defs/poedbLink"
+                                    },
+                                    {
+                                        "$ref": "common/links.schema.json#/$defs/poeFishLink"
                                     }
                                 ]
                             }
@@ -231,14 +295,6 @@
                     }
                 }
             ]
-        },
-        "wikiLink": {
-            "type": "string",
-            "pattern": "^https://(www\\.)?poewiki\\.net/wiki/\\w[A-Z,a-z'_\\-()%0-9:]+(#\\w[A-Z,a-z'_\\-()%0-9]+)?$"
-        },
-        "poeFishLink": {
-            "type": "string",
-            "pattern": "^https://poe\\.fish/\\w[/A-Za-z\\-]+(#\\w[A-Za-z\\-]+)?$"
         }
     }
 }

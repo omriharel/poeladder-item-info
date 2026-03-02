@@ -1,0 +1,7 @@
+acquisitionMethods:
+  - type: boss
+    boss: The Infinite Hunger
+    frequency: rare
+    wiki: https://www.poewiki.net/wiki/The_Infinite_Hunger
+    consumable:
+      id: writhingInvitation

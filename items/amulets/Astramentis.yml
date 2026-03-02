@@ -1,10 +1,8 @@
 acquisitionMethods:
   - type: typicalDivCardFarm
-    investment: low
+    investment: medium
     card: The Polymath
     wiki: https://www.poewiki.net/wiki/The_Polymath
     dropLocations:
-      - Museum
-      - Relic Chambers
-      - Sanctuary
-      - The Reliquary (act 5 and 10)
+      - Chambers of Impurity
+      - Silo

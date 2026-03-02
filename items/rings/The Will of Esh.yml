@@ -1,0 +1,13 @@
+acquisitionMethods:
+  - type: boss
+    boss: It That Was Esh
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/It_That_Was_Esh
+    consumable:
+      id: hivebrainGland
+  - type: boss
+    boss: It That Was Tul
+    frequency: uncommon
+    wiki: https://www.poewiki.net/wiki/It_That_Was_Tul
+    consumable:
+      id: hivebrainGland

@@ -3,3 +3,5 @@ acquisitionMethods:
     boss: The Maven
     frequency: rare
     wiki: https://www.poewiki.net/wiki/The_Maven#Drops
+    consumable:
+      id: mavensWrit

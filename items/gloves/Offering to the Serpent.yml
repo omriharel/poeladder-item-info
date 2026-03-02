@@ -1,0 +1,7 @@
+acquisitionMethods:
+  - type: boss
+    boss: High Templar Venarius
+    frequency: common
+    wiki: https://www.poewiki.net/wiki/Venarius#Drops
+    consumable:
+      id: cortex

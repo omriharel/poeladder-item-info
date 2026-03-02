@@ -1,0 +1,6 @@
+acquisitionMethods:
+  - type: leagueContent
+    leagueName: Settlers
+    text: This unique can be only obtained randomly as a reward for completing shipping quota from Kingsmarch to Riben Fell, Pondium, or Kalguur.
+    frequency: rare
+    wiki: https://www.poewiki.net/wiki/Ynda%27s_Stand#Item_acquisition

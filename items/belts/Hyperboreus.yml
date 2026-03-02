@@ -1,0 +1,6 @@
+acquisitionMethods:
+  - type: leagueContent
+    leagueName: Betrayal
+    text: Drops from executed Safehouse leaders in Transportation Safehouses. Only obtainable from Safehouses of area level 78 or higher.
+    frequency: common
+    wiki: https://www.poewiki.net/wiki/Hyperboreus#Item_acquisition

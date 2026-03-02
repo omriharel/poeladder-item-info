@@ -1,0 +1,8 @@
+acquisitionMethods:
+  - type: boss
+    boss: Kurgal, the Blackblooded
+    frequency: common
+    wiki: https://www.poewiki.net/wiki/Kurgal,_the_Blackblooded#Item_drops
+  - type: plainText
+    text: This boss can spawn in Delve nodes of at least 90 depth. Spawn rate of encounter increases until ~350 depth
+    referenceLink: https://poedb.tw/us/DelveBiomes#DelveBiomeWeight
