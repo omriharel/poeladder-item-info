@@ -6,5 +6,5 @@ acquisitionMethods:
     consumable:
       id: expeditionLogbookOfAfarud
   - type: plainText
-    text: Ridan can only be found in some Expedition Logbooks which drop inside a Mirage Expedition encounter. The Logbooks must include the text 'Area contains 1 additional Afarud Commander Monster Marker'. Heroic Tragedy is a guaranteed drop so you can 'split' this logbook into 2 or 3 via Beastcrafting to guarantee multiple jewels.
+    text: Ridan can only be found in some Expedition Logbooks which drop inside a Mirage Expedition encounter. The Logbooks must include the text 'Area contains 1 additional Afarud Commander Monster Marker'. Heroic Tragedy is a guaranteed drop so you can 'split' this logbook into 2 or 3 via Beastcrafting to guarantee multiple jewels. If your logbook contains a Remnant with the "Runic Monsters are Duplicated" suffix, and you include this in your blast chain, then this will also duplicate Ridan and give you two jewels.
     referenceLink: https://www.poewiki.net/wiki/Mirage#Interactions_with_other_league_mechanics
