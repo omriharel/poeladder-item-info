@@ -76,6 +76,22 @@ devouringFragments:
       text: Available from T17 Map Bosses
       wiki: https://www.poewiki.net/wiki/Devouring_Fragment
 
+expeditionLogbook:
+  type: leagueItem
+  components:
+    - name: Expedition Logbook
+      quantity: 1
+      text: Common drop from Expedition Content.
+      wiki: https://www.poewiki.net/wiki/Expedition_Logbook
+
+expeditionLogbookOfAfarud:
+  type: leagueItem
+  components:
+    - name: Afarud Expedition Logbook
+      quantity: 1
+      text: Uncommon drop from Expedition Content within a Mirage.
+      wiki: https://www.poewiki.net/wiki/Mirage#Interactions_with_other_league_mechanics
+
 incandescentInvitation:
   type: bossToken
   components:
