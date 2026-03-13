@@ -5,3 +5,9 @@ acquisitionMethods:
     wiki: https://www.poewiki.net/wiki/The_Apothecary
     dropLocations:
       - Defiled Cathedral
+  - type: typicalDivCardFarm
+    investment: low
+    card: The Eye of Terror
+    wiki: https://www.poewiki.net/wiki/The_Eye_of_Terror
+    dropLocations:
+        - It That Fled
